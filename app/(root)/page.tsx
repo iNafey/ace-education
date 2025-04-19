@@ -1,0 +1,396 @@
+'use client'
+
+import Image from "next/image";
+import Link from "next/link";
+import { FaCheck, FaTimes, FaWhatsapp, FaEnvelope } from "react-icons/fa";
+import { FaFacebook, FaInstagram, FaXTwitter } from "react-icons/fa6";
+import SlidingCards from "@/components/SlidingCards";
+export default function Home() {
+
+  const handleScroll = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>, targetId: string) => {
+    e.preventDefault();
+    const targetElement = document.getElementById(targetId);
+    if (targetElement) {
+      targetElement.scrollIntoView({ behavior: 'smooth' });
+      // Update URL without causing a page reload
+      window.history.pushState({}, '', `/#${targetId}`);
+    }
+  };
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-blue-100 via-blue-50 to-blue-200 dark:bg-gradient-to-b dark:from-[#1e2129] dark:via-slate dark:from-[#1e2129]" >
+      {/* Navbar */}
+      
+
+      {/* Hero Section */}
+      <main className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center space-y-8">
+            <div className="logo-container flex flex-col items-center justify-center my-16">
+              <Image src="/logo.svg" alt="Ace Education Logo" width={600} height={600} />
+              <h1 className="text-4xl sm:text-6xl font-bold tracking-tight text-ocean dark:text-white">Ace Education</h1>
+            </div>
+            <div className="inline-block">
+              <span className="inline-flex items-center px-4 py-2 rounded-full border border-blue-200 bg-white/80 backdrop-blur-sm text-sm shadow-sm dark:text-midnight-grey dark:bg-white">
+                Top-tier tutors at unbeatable prices 
+                <Link href="/about" className="ml-2 text-blue-600 hover:underline dark:text-navy-200">
+                  Here's our story →
+                </Link>
+              </span>
+            </div>
+            
+            <h1 className="text-4xl sm:text-6xl font-bold tracking-tight text-gray-900 dark:text-white">
+              Online Tutoring for GCSEs and A-Levels
+            </h1>
+            
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto dark:text-gray-200">
+              Ace Education is the ultimate online tutoring platform to prepare students for GCSEs and A-Levels.
+            </p>
+
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
+              <a
+              href="#waitlist"
+              onClick={(e) => handleScroll(e, 'waitlist')}
+              className="inline-flex items-center justify-center px-6 py-2 border border-transparent text-base font-medium rounded-lg text-white bg-pastel-blue hover:bg-pastel-blue/90 hover:scale-105 hover:shadow-lg transition-all duration-200 cursor-pointer"
+              >
+                Sign Up Today
+              </a>
+            </div>
+
+            {/* Scroll Indicator */}
+            <div className="mt-16 animate-bounce">
+              <svg className="w-6 h-6 mx-auto text-blue-600 dark:text-yellow-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+              </svg>
+            </div>
+          </div>
+
+          {/* Services Section */}
+          <section className="mt-32 scroll-mt-24" id="services">
+            <h2 className="text-3xl font-bold text-center mb-12 text-gray-900 dark:text-white">Our Services</h2>
+            {/* <h4 className="text-l font-semibold mb-4 text-gray-900">We offer</h4> */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className="bg-white rounded-lg p-6 shadow-sm border border-blue-100 hover:border-blue-200 transition-all">
+                <h3 className="text-xl font-semibold mb-4 text-gray-900">Subjects</h3>
+                <p className="text-gray-600">Comprehensive tutoring in all major STEM subjects for GCSEs and A-Levels:</p>
+                
+                <ul className="list-disc list-inside space-y-2 mt-5 text-gray-600">
+                  <li>Maths</li>
+                  <li>Physics</li>
+                  <li>Chemistry</li>
+                  <li>Biology</li>
+                  <li>Computer Science</li>
+                  <li>Economics</li>
+                </ul>
+                
+              </div>
+              <div className="bg-white rounded-lg p-6 shadow-sm border border-blue-100 hover:border-blue-200 transition-all">
+                <h3 className="text-xl font-semibold mb-4 text-gray-900">Flexibility</h3>
+                <p className="text-gray-600">Schedule sessions at your convenience. We offer lessons anytime during the academic year, although earlier is best for results!</p>
+              </div>
+              <div className="bg-white rounded-lg p-6 shadow-sm border border-blue-100 hover:border-blue-200 transition-all">
+                <h3 className="text-xl font-semibold mb-4 text-gray-900">Career Advice</h3>
+                <p className="text-gray-600">Expert guidance on a-level and university applications. As well as helping you navigate career paths and opportunities.</p>
+              </div>
+            </div>
+          </section>
+
+          {/* Problems with Current Tutoring */}
+          <section className="mt-32">
+            <h2 className="text-3xl font-bold text-center mb-12 text-gray-900 dark:text-white">What's Currently Wrong with Tutoring?</h2>
+            <div className="bg-white rounded-lg p-8 shadow-sm border border-blue-100 hover:border-blue-200 transition-all max-w-3xl mx-auto">
+              <ul className="space-y-4">
+                <li className="flex items-start gap-3">
+                  <FaTimes className="text-red-500 mt-1" />
+                  <span className="text-gray-600">Main focus is on grades and not future outlook</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <FaTimes className="text-red-500 mt-1" />
+                  <span className="text-gray-600">No career paths explored or designed</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <FaTimes className="text-red-500 mt-1" />
+                  <span className="text-gray-600">Expensive</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <FaTimes className="text-red-500 mt-1" />
+                  <span className="text-gray-600">Unrelatable tutors</span>
+                </li>
+              </ul>
+            </div>
+          </section>
+
+          {/* Why Choose Us */}
+          <section className="mt-32">
+            <h2 className="text-3xl font-bold text-center mb-12 text-gray-900 dark:text-white">Why Choose Us?</h2>
+            <div className="bg-white rounded-lg p-8 shadow-sm border border-blue-100 hover:border-blue-200 transition-all max-w-3xl mx-auto">
+              <ul className="space-y-4">
+                <li className="flex items-start gap-3">
+                  <FaCheck className="text-green-500 text-4xl sm:text-xl md:text-2xl mt-1" />
+                  <span className="text-gray-600">Our team is comprised of young professionals who have experienced the recent school system that students are currently going through</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <FaCheck className="text-green-500 mt-1" />
+                  <span className="text-gray-600">Our knowledge about life after school is current</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <FaCheck className="text-green-500 mt-1" />
+                  <span className="text-gray-600">Our tutors know how to get into the best companies</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <FaCheck className="text-green-500 mt-1" />
+                  <span className="text-gray-600">We can help you get started on your entrepreneurial journey (if interested)</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <FaCheck className="text-green-500 mt-1" />
+                  <span className="text-gray-600">Fair price for both students and tutors</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <FaCheck className="text-green-500 mt-1" />
+                  <span className="text-gray-600">We offer more than just a tutor, you will get a friend and a role model</span>
+                </li>
+              </ul>
+            </div>
+          </section>
+
+          {/* Proof Section */}
+          <section className="mt-32">
+            <h2 className="text-3xl font-bold text-center mb-12 text-gray-900 dark:text-white">Our Proof</h2>
+            <div className="grid grid-cols-1 gap-8 max-w-3xl mx-auto">
+              <div className="bg-white rounded-lg p-6 shadow-sm border border-blue-100 hover:border-blue-200 transition-all">
+                <h3 className="text-xl font-semibold mb-4 text-gray-900">Academic Achievements</h3>
+                <div className="space-y-4">
+                  {/* <Image src="/gcse.jpg" alt="GCSE Results" width={300} height={200} className="rounded-lg" />
+                  <Image src="/alevel.jpg" alt="A-Level Results" width={300} height={200} className="rounded-lg" />
+                  <Image src="/uni.jpg" alt="University Transcript" width={300} height={200} className="rounded-lg" /> */}
+                  <SlidingCards />
+                </div>
+              </div>
+              <div className="bg-white rounded-lg p-6 shadow-sm border border-blue-100 hover:border-blue-200 transition-all">
+                <h3 className="text-xl font-semibold mb-4 text-gray-900">Professional Success</h3>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div className="bg-white rounded-lg shadow-sm border border-blue-100 overflow-hidden transition-all duration-300 hover:border-blue-200">
+                    <Image 
+                      src="/job1.jpg" 
+                      alt="Investment Banking" 
+                      width={300} 
+                      height={200} 
+                      className="w-full h-48 object-cover"
+                    />
+                    <div className="p-4 space-y-2">
+                      <h3 className="text-lg font-semibold text-gray-900">Investment Banking</h3>
+                      <p className="text-gray-600">Goldman Sachs</p>
+                    </div>
+                  </div>
+
+                  <div className="bg-white rounded-lg shadow-sm border border-blue-100 overflow-hidden transition-all duration-300 hover:border-blue-200">
+                    <Image 
+                      src="/images/Job Offer 2.png" 
+                      alt="Management Consulting" 
+                      width={300} 
+                      height={200} 
+                      className="w-full h-48 object-contain"
+                    />
+                    <div className="p-4 space-y-2">
+                      <h3 className="text-lg font-semibold text-gray-900">Software Graduate Programme</h3>
+                      <p className="text-gray-600">Thales</p>
+                    </div>
+                  </div>
+
+                  <div className="bg-white rounded-lg shadow-sm border border-blue-100 overflow-hidden transition-all duration-300 hover:border-blue-200">
+                    <Image 
+                      src="/images/Job Offer 1.png" 
+                      alt="Software Engineering" 
+                      width={300} 
+                      height={200} 
+                      className="w-full h-48 object-cover"
+                    />
+                    <div className="p-4 space-y-2">
+                      <h3 className="text-lg font-semibold text-gray-900">Modern Analyst (Software)</h3>
+                      <p className="text-gray-600">Accenture</p>
+                    </div>
+                  </div>
+
+                  <div className="bg-white rounded-lg shadow-sm border border-blue-100 overflow-hidden transition-all duration-300 hover:border-blue-200">
+                    <Image 
+                      src="/job2.jpg" 
+                      alt="Entrepreneurship" 
+                      width={300} 
+                      height={200} 
+                      className="w-full h-48 object-cover"
+                    />
+                    <div className="p-4 space-y-2">
+                      <h3 className="text-lg font-semibold text-gray-900">Entrepreneurship</h3>
+                      <p className="text-gray-600">Successful Startups</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* Pricing Section */}
+          <section className="mt-32 scroll-mt-24" id="pricing">
+            <h2 className="text-3xl font-bold text-center mb-12 text-gray-900 dark:text-white">Pricing</h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto px-4">
+              {/* Pay as you go Tier */}
+              <div className="group bg-white rounded-2xl p-8 shadow-sm border-2 border-gray-200 hover:border-blue-500 hover:shadow-lg focus-within:border-blue-500 focus-within:shadow-lg transition-all cursor-pointer">
+                <div className="space-y-4">
+                  <h3 className="text-xl font-semibold text-gray-900">Pay as you go</h3>
+                  <p className="text-gray-500">Perfect for occasional help</p>
+                  <div className="flex items-baseline">
+                    <span className="text-5xl font-bold text-gray-900">£20</span>
+                    <span className="text-gray-500 ml-2">/ hour</span>
+                  </div>
+                  <ul className="space-y-4 mt-6">
+                    <li className="flex items-start gap-3">
+                      <FaCheck className="text-green-500 mt-1" />
+                      <span className="text-gray-600">Great for finding the right tutor</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <FaCheck className="text-green-500 mt-1" />
+                      <span className="text-gray-600">Ad-hoc lessons or mock exam prep</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <FaCheck className="text-green-500 mt-1" />
+                      <span className="text-gray-600">Career or entrepreneurial advice available</span>
+                    </li>
+                  </ul>
+                  <button className="w-full mt-8 bg-white text-gray-900 border-2 border-gray-200 group-hover:border-blue-500 font-semibold py-3 px-6 rounded-lg transition-all">
+                    Join Waitlist
+                  </button>
+                </div>
+              </div>
+
+              {/* Monthly Tier */}
+              <div className="group bg-white rounded-2xl p-8 shadow-lg border-2 border-gray-200 hover:border-blue-500 hover:shadow-xl focus-within:shadow-xl transition-all cursor-pointer relative">
+                <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-yellow-300 text-gray-900 px-4 py-1 rounded-full text-sm font-medium">
+                  Most popular
+                </div>
+                <div className="space-y-4">
+                  <h3 className="text-xl font-semibold text-gray-900">Monthly Plan</h3>
+                  <p className="text-gray-500">Perfect for weekly tutoring</p>
+                  <div className="flex items-baseline">
+                    <span className="text-5xl font-bold text-gray-900">£100</span>
+                    <span className="text-gray-500 ml-2">/ month</span>
+                  </div>
+                  <p className="text-sm text-gray-500">Includes 4 hours of tutoring</p>
+                  <ul className="space-y-4 mt-6">
+                    <li className="flex items-start gap-3">
+                      <FaCheck className="text-green-500 mt-1" />
+                      <span className="text-gray-600">4 (1 hour) classes included</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <FaCheck className="text-green-500 mt-1" />
+                      <span className="text-gray-600">Perfect for weekly tutoring</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <FaCheck className="text-green-500 mt-1" />
+                      <span className="text-gray-600">Problem solving, exam prep and career advice</span>
+                    </li>
+                  </ul>
+                  <button className="w-full mt-8 bg-white text-gray-900 border-2 border-gray-200 group-hover:border-blue-500 font-semibold py-3 px-6 rounded-lg transition-all">
+                    Join Waitlist
+                  </button>
+                </div>
+              </div>
+
+              {/* Yearly Tier */}
+              <div className="group bg-white rounded-2xl p-8 shadow-sm border-2 border-gray-200 hover:border-blue-500 hover:shadow-lg focus-within:border-blue-500 focus-within:shadow-lg transition-all cursor-pointer">
+                <div className="space-y-4">
+                  <h3 className="text-xl font-semibold text-gray-900">Academic Year</h3>
+                  <p className="text-gray-500">For the best exam results</p>
+                  <div className="flex items-baseline">
+                    <span className="text-5xl font-bold text-gray-900">£1000</span>
+                    <span className="text-gray-500 ml-2">/ year</span>
+                  </div>
+                  <ul className="space-y-4 mt-6">
+                    <li className="flex items-start gap-3">
+                      <FaCheck className="text-green-500 mt-1" />
+                      <span className="text-gray-600">1 academic year subscription</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <FaCheck className="text-green-500 mt-1" />
+                      <span className="text-gray-600">1 hour class every week till exam season</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <FaCheck className="text-green-500 mt-1" />
+                      <span className="text-gray-600">For best results, as everything is taught before the exams</span>
+                    </li>
+                  </ul>
+                  <button className="w-full mt-8 bg-white text-gray-900 border-2 border-gray-200 group-hover:border-blue-500 font-semibold py-3 px-6 rounded-lg transition-all">
+                    Join Waitlist
+                  </button>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* Waitlist Section */}
+          <section className="mt-32" id="waitlist">
+            <div className="bg-white rounded-lg p-8 shadow-sm border border-blue-100 hover:border-blue-200 transition-all max-w-2xl mx-auto">
+              <h2 className="text-3xl font-bold text-center mb-8 text-gray-900">Join Our Waitlist</h2>
+              <form className="space-y-4">
+                <input
+                  type="email"
+                  placeholder="Enter your email"
+                  className="w-full px-4 py-3 rounded-lg bg-white border border-blue-100 focus:outline-none focus:border-blue-200"
+                />
+                <button
+                  type="submit"
+                  className="w-full inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-lg text-white bg-pastel-blue hover:bg-pastel-blue/90 hover:scale-105 hover:shadow-lg transition-all duration-200"
+                >
+                  Sign Up
+                </button>
+              </form>
+            </div>
+          </section>
+
+          {/* FAQ Section */}
+          <section className="mt-32">
+            <h2 className="text-3xl font-bold text-center mb-12 text-gray-900 dark:text-white">Common Questions</h2>
+            <div className="max-w-3xl mx-auto space-y-4">
+              <div className="bg-white rounded-lg p-6 shadow-sm border border-blue-100 hover:border-blue-200 transition-all">
+                <h3 className="text-xl font-semibold mb-2 text-gray-900">How do I get started?</h3>
+                <p className="text-gray-600">Simply sign up for our waitlist and we'll contact you to schedule your first session.</p>
+              </div>
+              <div className="bg-white rounded-lg p-6 shadow-sm border border-blue-100 hover:border-blue-200 transition-all">
+                <h3 className="text-xl font-semibold mb-2 text-gray-900">What subjects do you cover?</h3>
+                <p className="text-gray-600">We cover all major GCSE and A-Level subjects, with a focus on STEM subjects.</p>
+              </div>
+              <div className="bg-white rounded-lg p-6 shadow-sm border border-blue-100 hover:border-blue-200 transition-all">
+                <h3 className="text-xl font-semibold mb-2 text-gray-900">Can I change my subscription plan?</h3>
+                <p className="text-gray-600">Yes, you can upgrade or downgrade your plan at any time.</p>
+              </div>
+            </div>
+          </section>
+
+          {/* Contact Section */}
+          <section className="mt-32 mb-16 scroll-mt-24" id="contact">
+            <h2 className="text-3xl font-bold text-center mb-12 text-gray-900 dark:text-white">Contact Us</h2>
+            <div className="flex flex-col items-center space-y-6">
+              <div className="flex items-center space-x-4">
+                <FaEnvelope className="text-2xl text-blue-600 dark:text-blue-400" />
+                <span className="text-gray-600 dark:text-gray-200">contact@aceeducation.com</span>
+              </div>
+              <div className="flex items-center space-x-4">
+                <FaWhatsapp className="text-2xl text-blue-600 dark:text-blue-400" />
+                <span className="text-gray-600 dark:text-gray-200">+44 123 456 7890</span>
+              </div>
+              <div className="flex space-x-6">
+                <Link href="https://facebook.com" className="hover:text-blue-600 dark:hover:text-navy-200 transition-colors">
+                  <FaFacebook className="text-2xl" />
+                </Link>
+                <Link href="https://instagram.com" className="hover:text-blue-600 dark:hover:text-navy-200 transition-colors">
+                  <FaInstagram className="text-2xl" />
+                </Link>
+                <Link href="https://twitter.com" className="hover:text-blue-600 dark:hover:text-navy-200 transition-colors">
+                  <FaXTwitter className="text-2xl" />
+                </Link>
+              </div>
+            </div>
+          </section>
+        </div>
+      </main>
+    </div>
+  );
+}

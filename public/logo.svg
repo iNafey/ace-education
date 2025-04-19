@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   version="1.1"
+   id="svg1"
+   width="691"
+   height="355"
+   viewBox="0 0 691 355"
+   sodipodi:docname="Ace Education logo.svg"
+   inkscape:version="1.3.2 (091e20e, 2023-11-25, custom)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1" />
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#505050"
+     bordercolor="#ffffff"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     inkscape:deskcolor="#505050"
+     inkscape:zoom="1.4782923"
+     inkscape:cx="266.86197"
+     inkscape:cy="293.92022"
+     inkscape:window-width="2560"
+     inkscape:window-height="1417"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g1" />
+  <g
+     inkscape:groupmode="layer"
+     inkscape:label="Image"
+     id="g1">
+    <path
+       style="fill:#03254b;fill-opacity:1"
+       d="m 147.20492,280.05881 106.54185,-221.201169 22.32306,-0.0846 13.44457,27.98838 -93.72059,193.736819 z"
+       id="path2" />
+    <path
+       style="fill:#3e8abc;fill-opacity:1"
+       d="m 294.4187,97.838431 -25.959,51.495229 16.57317,37.71243 -35.0066,-0.42279 -19.70179,40.58737 72.2117,-0.33822 24.69065,53.69371 51.7489,-0.33823 z"
+       id="path3" />
+    <path
+       style="fill:#036195;fill-opacity:1"
+       d="m 388.44611,59.618651 0.47213,131.372739 h 133.81191 l -0.11958,-42.33192 -87.17505,0.11958 -0.0603,-49.672269 124.80617,0.67646 0.0974,-39.85338 z"
+       id="path4" />
+    <path
+       style="fill:#55a1d2;fill-opacity:1"
+       d="m 388.92175,190.97799 -0.36225,89.4605 188.46074,-0.11958 0.35875,-39.70112 -142.30222,0.11958 0.11959,-49.6264 z"
+       id="path5" />
+  </g>
+</svg>
