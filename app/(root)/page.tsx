@@ -1,21 +1,12 @@
-'use client'
-
 import Image from "next/image";
 import Link from "next/link";
 import { FaCheck, FaTimes, FaWhatsapp, FaEnvelope } from "react-icons/fa";
 import { FaFacebook, FaInstagram, FaXTwitter } from "react-icons/fa6";
 import SlidingCards from "@/components/SlidingCards";
+import SignUpButton from "@/components/SignUpButton";
 export default function Home() {
 
-  const handleScroll = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>, targetId: string) => {
-    e.preventDefault();
-    const targetElement = document.getElementById(targetId);
-    if (targetElement) {
-      targetElement.scrollIntoView({ behavior: 'smooth' });
-      // Update URL without causing a page reload
-      window.history.pushState({}, '', `/#${targetId}`);
-    }
-  };
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-100 via-blue-50 to-blue-200 dark:bg-gradient-to-b dark:from-[#1e2129] dark:via-slate dark:from-[#1e2129]" >
       {/* Navbar */}
@@ -46,15 +37,7 @@ export default function Home() {
               Ace Education is the ultimate online tutoring platform to prepare students for GCSEs and A-Levels.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
-              <a
-              href="#waitlist"
-              onClick={(e) => handleScroll(e, 'waitlist')}
-              className="inline-flex items-center justify-center px-6 py-2 border border-transparent text-base font-medium rounded-lg text-white bg-pastel-blue hover:bg-pastel-blue/90 hover:scale-105 hover:shadow-lg transition-all duration-200 cursor-pointer"
-              >
-                Sign Up Today
-              </a>
-            </div>
+            <SignUpButton />
 
             {/* Scroll Indicator */}
             <div className="mt-16 animate-bounce">
@@ -74,17 +57,20 @@ export default function Home() {
                 <p className="text-gray-600">Comprehensive tutoring in all major STEM subjects for GCSEs and A-Levels:</p>
                 
                 <ul className="list-disc list-inside space-y-2 mt-5 text-gray-600">
-                  <li>Maths</li>
-                  <li>Physics</li>
-                  <li>Chemistry</li>
                   <li>Biology</li>
+                  <li>Business Studies</li>
+                  <li>Chemistry</li>
                   <li>Computer Science</li>
                   <li>Economics</li>
+                  <li>English</li>
+                  <li>Geography</li>
+                  <li>Maths</li>
+                  <li>Physics</li>
                 </ul>
                 
               </div>
               <div className="bg-white rounded-lg p-6 shadow-sm border border-blue-100 hover:border-blue-200 transition-all">
-                <h3 className="text-xl font-semibold mb-4 text-gray-900">Flexibility</h3>
+                <h3 className="text-xl font-semibold mb-4 text-gray-900">Flexible Lessons</h3>
                 <p className="text-gray-600">Schedule sessions at your convenience. We offer lessons anytime during the academic year, although earlier is best for results!</p>
               </div>
               <div className="bg-white rounded-lg p-6 shadow-sm border border-blue-100 hover:border-blue-200 transition-all">
@@ -230,7 +216,8 @@ export default function Home() {
 
           {/* Pricing Section */}
           <section className="mt-32 scroll-mt-24" id="pricing">
-            <h2 className="text-3xl font-bold text-center mb-12 text-gray-900 dark:text-white">Pricing</h2>
+            <h2 className="text-3xl font-bold text-center mb-2 text-gray-900 dark:text-white">Pricing</h2>
+            
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto px-4">
               {/* Pay as you go Tier */}
               <div className="group bg-white rounded-2xl p-8 shadow-sm border-2 border-gray-200 hover:border-blue-500 hover:shadow-lg focus-within:border-blue-500 focus-within:shadow-lg transition-all cursor-pointer">
@@ -240,6 +227,9 @@ export default function Home() {
                   <div className="flex items-baseline">
                     <span className="text-5xl font-bold text-gray-900">£20</span>
                     <span className="text-gray-500 ml-2">/ hour</span>
+                  </div>
+                  <div className="flex justify-start mb-2">
+                    <h3 className="text-sm font-bold text-center text-red-500 border-2 border-red-500 rounded-full py-1 px-2 inline-block">Limited time only!</h3>
                   </div>
                   <ul className="space-y-4 mt-6">
                     <li className="flex items-start gap-3">
@@ -270,7 +260,7 @@ export default function Home() {
                   <h3 className="text-xl font-semibold text-gray-900">Monthly Plan</h3>
                   <p className="text-gray-500">Perfect for weekly tutoring</p>
                   <div className="flex items-baseline">
-                    <span className="text-5xl font-bold text-gray-900">£100</span>
+                    <span className="text-5xl font-bold text-gray-900">£80</span>
                     <span className="text-gray-500 ml-2">/ month</span>
                   </div>
                   <p className="text-sm text-gray-500">Includes 4 hours of tutoring</p>
@@ -300,21 +290,21 @@ export default function Home() {
                   <h3 className="text-xl font-semibold text-gray-900">Academic Year</h3>
                   <p className="text-gray-500">For the best exam results</p>
                   <div className="flex items-baseline">
-                    <span className="text-5xl font-bold text-gray-900">£1000</span>
+                    <span className="text-5xl font-bold text-gray-900">£750</span>
                     <span className="text-gray-500 ml-2">/ year</span>
                   </div>
                   <ul className="space-y-4 mt-6">
                     <li className="flex items-start gap-3">
                       <FaCheck className="text-green-500 mt-1" />
-                      <span className="text-gray-600">1 academic year subscription</span>
+                      <span className="text-gray-600">Tutoring for an entire academic year</span>
                     </li>
                     <li className="flex items-start gap-3">
                       <FaCheck className="text-green-500 mt-1" />
-                      <span className="text-gray-600">1 hour class every week till exam season</span>
+                      <span className="text-gray-600">1 hour class every week till exams</span>
                     </li>
                     <li className="flex items-start gap-3">
                       <FaCheck className="text-green-500 mt-1" />
-                      <span className="text-gray-600">For best results, as everything is taught before the exams</span>
+                      <span className="text-gray-600">Everything is taught before the exams (for best results)</span>
                     </li>
                   </ul>
                   <button className="w-full mt-8 bg-white text-gray-900 border-2 border-gray-200 group-hover:border-blue-500 font-semibold py-3 px-6 rounded-lg transition-all">
