@@ -29,15 +29,15 @@ export default function Navbar() {
     }
   };
 
-  const handleScroll = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>, targetId: string) => {
-    e.preventDefault();
-    const targetElement = document.getElementById(targetId);
-    if (targetElement) {
-      targetElement.scrollIntoView({ behavior: 'smooth' });
-      // Update URL without causing a page reload
-      window.history.pushState({}, '', `/#${targetId}`);
-    }
-  };
+  // const handleScroll = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>, targetId: string) => {
+  //   e.preventDefault();
+  //   const targetElement = document.getElementById(targetId);
+  //   if (targetElement) {
+  //     targetElement.scrollIntoView({ behavior: 'smooth' });
+  //     // Update URL without causing a page reload
+  //     window.history.pushState({}, '', `/#${targetId}`);
+  //   }
+  // };
 
   return (
     <nav className="fixed w-full top-0 z-50 bg-background border-b border-gray-200 dark:border-gray-800">
@@ -57,27 +57,38 @@ export default function Navbar() {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-4">
-            <a 
+            {/* <a 
               href="/#services" 
               onClick={(e) => handleScroll(e, 'services')}
               className="text-foreground hover:text-gray-600 dark:hover:text-gray-300 px-3 py-2 cursor-pointer"
             >
               Services
-            </a>
-            <a 
+            </a> */}
+
+            <Link 
+              href="/#services" 
+              // onClick={(e) => handleScroll(e, 'services')} 
+              scroll={true}
+              className="text-foreground hover:text-gray-600 dark:hover:text-gray-300 px-3 py-2 cursor-pointer"
+            >
+              Services
+            </Link>
+            <Link 
               href="/#pricing" 
-              onClick={(e) => handleScroll(e, 'pricing')}
+              // onClick={(e) => handleScroll(e, 'pricing')}
+              scroll={true}
               className="text-foreground hover:text-gray-600 dark:hover:text-gray-300 px-3 py-2 cursor-pointer"
             >
               Pricing
-            </a>
-            <a 
+            </Link>
+            <Link
               href="/#contact" 
-              onClick={(e) => handleScroll(e, 'contact')}
+              // onClick={(e) => handleScroll(e, 'contact')}
+              scroll={true}
               className="text-foreground hover:text-gray-600 dark:hover:text-gray-300 px-3 py-2 cursor-pointer"
             >
               Contact
-            </a>
+            </Link>
             {/* <Link href="/demo" className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white px-3 py-2 flex items-center">
               Does it work?
               <span className="ml-2 bg-[#85e249] text-black text-xs px-2 py-0.5 rounded-full">NEW</span>
@@ -93,13 +104,14 @@ export default function Navbar() {
                 Login
             </Link> */}
             
-            <a
+            <Link
               href="/#waitlist"
-              onClick={(e) => handleScroll(e, 'waitlist')}
+              // onClick={(e) => handleScroll(e, 'waitlist')}
+              scroll={true}
               className="inline-flex items-center justify-center px-6 py-2 border border-transparent text-base font-medium rounded-lg text-white bg-pastel-blue hover:bg-pastel-blue/90 hover:scale-105 hover:shadow-lg transition-all duration-200 cursor-pointer"
             >
               Register Interest
-            </a>
+            </Link>
           </div>
 
           {/* Mobile Menu */}

@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import { FaCheck, FaTimes, FaWhatsapp, FaEnvelope } from "react-icons/fa";
-import { FaFacebook, FaInstagram, FaXTwitter } from "react-icons/fa6";
 import SlidingCards from "@/components/SlidingCards";
 import SignUpButton from "@/components/SignUpButton";
 import WaitlistCard from "@/components/WaitlistCard";
@@ -25,7 +24,7 @@ export default function Home() {
               <span className="inline-flex items-center px-4 py-2 rounded-full border border-blue-200 bg-white/80 backdrop-blur-sm text-sm shadow-sm dark:text-midnight-grey dark:bg-white">
                 Top-tier tutors at unbeatable prices 
                 <Link href="/about" className="ml-2 text-blue-600 hover:underline dark:text-navy-200">
-                  Here's our story →
+                  Here&apos;s our story →
                 </Link>
               </span>
             </div>
@@ -83,7 +82,7 @@ export default function Home() {
 
           {/* Problems with Current Tutoring */}
           <section className="mt-32">
-            <h2 className="text-3xl font-bold text-center mb-12 text-gray-900 dark:text-white">What's Currently Wrong with Tutoring?</h2>
+            <h2 className="text-3xl font-bold text-center mb-12 text-gray-900 dark:text-white">What&apos;s Currently Wrong with Tutoring?</h2>
             <div className="bg-white rounded-lg p-8 shadow-sm border border-blue-100 hover:border-blue-200 transition-all max-w-3xl mx-auto">
               <ul className="space-y-4">
                 <li className="flex items-start gap-3">
@@ -331,7 +330,7 @@ export default function Home() {
             <div className="max-w-3xl mx-auto space-y-4">
               <div className="bg-white rounded-lg p-6 shadow-sm border border-blue-100 hover:border-blue-200 transition-all">
                 <h3 className="text-xl font-semibold mb-2 text-gray-900">How do I get started?</h3>
-                <p className="text-gray-600">Simply sign up for our waitlist and we'll contact you to schedule your first session.</p>
+                <p className="text-gray-600">Simply sign up for our waitlist and we&apos;ll contact you to schedule your first session.</p>
               </div>
               <div className="bg-white rounded-lg p-6 shadow-sm border border-blue-100 hover:border-blue-200 transition-all">
                 <h3 className="text-xl font-semibold mb-2 text-gray-900">What subjects do you cover?</h3>

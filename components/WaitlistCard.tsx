@@ -1,7 +1,7 @@
 "use client"
 
 // For ECMAScript (ESM)
-import MailerLite from '@mailerlite/mailerlite-nodejs';
+//import MailerLite from '@mailerlite/mailerlite-nodejs';
 import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from 'react-hook-form';
 import { z } from "zod";
@@ -24,9 +24,9 @@ import { toast } from "sonner";
 import { LoadingSpinner } from './LoadingSpinner';
 
 
-const mailerlite = new MailerLite({
-  api_key: process.env.MAILERLITE_API_KEY || ""
-});
+// const mailerlite = new MailerLite({
+//   api_key: process.env.MAILERLITE_API_KEY || ""
+// });
 
 const formSchema = z.object({
     email: z.string().email({message: "Please enter a valid email"}),
@@ -105,7 +105,7 @@ export default function WaitlistCard() {
                 Sign Up
             </button>
             </form> */}
-            <p className="text-gray-500 mb-6">We'll contact you to schedule your first session.</p>
+            <p className="text-gray-500 mb-6">We&apos;ll contact you to schedule your first session.</p>
             <Form {...form}>
                 <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
                     <FormField

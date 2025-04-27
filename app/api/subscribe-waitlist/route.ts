@@ -1,22 +1,7 @@
 import MailerLite from "@mailerlite/mailerlite-nodejs";
-import axios from "axios";
 import { NextRequest, NextResponse } from "next/server";
 import { z } from "zod";
 
-// Define response data type
-type Data = { message?: string; error?: string; };
-
-// Email validation schema
-const EmailSchema = z
-  .string()
-  .email({ message: "Please enter a valid email address" });
-
-// Phone validation schema
-const PhoneSchema = z
-  .string()
-  .regex(/^(\+44\s?7\d{3}|\(?07\d{3}\)?)\s?\d{3}\s?\d{3}$/, {
-    message: "Please enter a valid UK mobile number"
-  });
 
 // Define request schema
 const RequestSchema = z.object({
@@ -47,6 +32,7 @@ export async function POST(request: NextRequest) {
       await mailerlite.subscribers.find(email);
       return NextResponse.json({ error: "You are already subscribed to the waitlist" }, { status: 400 });
     } catch (error) {
+      console.error("Subscriber not found, creating new one:", error);
       // If subscriber doesn't exist, create new subscriber
       const params = {
         email: email,
@@ -59,14 +45,14 @@ export async function POST(request: NextRequest) {
       await mailerlite.subscribers.createOrUpdate(params);
       return NextResponse.json({ message: "You have been added to the waitlist" }, { status: 200 });
     }
-  } catch (error) {
-    console.error("Error in POST handler:", error);
-    if (error instanceof z.ZodError) {
-      return NextResponse.json({ error: error.errors[0].message }, { status: 400 });
-    }
+  } catch (err) {
+     console.error("Error in POST handler:", err);
+    // if (error instanceof z.ZodError) {
+    //   return NextResponse.json({ error: error.errors[0].message }, { status: 400 });
+    // }
     return NextResponse.json({ 
       error: "An error occurred while processing your request",
-      details: error instanceof Error ? error.message : "Unknown error"
+      details: err instanceof Error ? err.message : "Unknown error"
     }, { status: 500 });
   }
 }

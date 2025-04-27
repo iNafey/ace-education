@@ -1,8 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Separator } from "./ui/separator";
-import { FaFacebook, FaInstagram, FaTiktok } from "react-icons/fa";
-import { FaXTwitter, FaSquareThreads, FaThreads } from "react-icons/fa6";
+import { FaFacebook, FaInstagram } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 
 const Footer = () => {
     return (
