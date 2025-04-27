@@ -9,8 +9,12 @@ const figtree = Figtree({
 });
 
 export const metadata: Metadata = {
-  title: "TutorPro - Your Path to Interview Success",
-  description: "Master coding interviews with our AI-powered tutoring platform",
+  title: "Ace Educate",
+  description: "Ultimate online tutoring platfom for UK GCSEs and A-levels, focused on career mentorship",
+  icons: {
+    icon: '/favicon.ico',
+    shortcut: '/favicon-96x96.png',
+  },
 };
 
 export default function RootLayout({
