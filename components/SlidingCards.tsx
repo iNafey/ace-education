@@ -15,7 +15,7 @@ export default function SlidingCards() {
       id: 2, 
       title: "University of Leicester", 
       description: "First Class Honours", 
-      image: "/images/First Class Honours.png" 
+      image: "/images/First Class Honours.PNG" 
     },
     // {
     //   id: 3,

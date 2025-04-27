@@ -170,7 +170,7 @@ export default function Home() {
 
                   <div className="bg-white rounded-lg shadow-sm border border-blue-100 overflow-hidden transition-all duration-300 hover:border-blue-200">
                     <Image 
-                      src="/images/Job Offer 2.png" 
+                      src="/images/Job Offer 2.PNG" 
                       alt="Software Graduate Programme" 
                       width={300} 
                       height={200} 
@@ -184,7 +184,7 @@ export default function Home() {
 
                   <div className="bg-white rounded-lg shadow-sm border border-blue-100 overflow-hidden transition-all duration-300 hover:border-blue-200">
                     <Image 
-                      src="/images/Job Offer 1.png" 
+                      src="/images/Job Offer 1.PNG" 
                       alt="Modern Analyst (Software)" 
                       width={300} 
                       height={200} 
