@@ -50,7 +50,7 @@ export default function Navbar() {
             <Link href='/'>
               <div className='flex items-center'>
                 <Image src='/logo.svg' alt='logo' width={50} height={50} />
-                <span className='text-30-extrabold ml-2 text-foreground'>Ace Education</span>
+                <span className='text-30-extrabold ml-2 text-foreground'>Ace Educate</span>
               </div>
             </Link>
           </div>
@@ -58,21 +58,21 @@ export default function Navbar() {
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-4">
             <a 
-              href="#services" 
+              href="/#services" 
               onClick={(e) => handleScroll(e, 'services')}
               className="text-foreground hover:text-gray-600 dark:hover:text-gray-300 px-3 py-2 cursor-pointer"
             >
               Services
             </a>
             <a 
-              href="#pricing" 
+              href="/#pricing" 
               onClick={(e) => handleScroll(e, 'pricing')}
               className="text-foreground hover:text-gray-600 dark:hover:text-gray-300 px-3 py-2 cursor-pointer"
             >
               Pricing
             </a>
             <a 
-              href="#contact" 
+              href="/#contact" 
               onClick={(e) => handleScroll(e, 'contact')}
               className="text-foreground hover:text-gray-600 dark:hover:text-gray-300 px-3 py-2 cursor-pointer"
             >
@@ -94,7 +94,7 @@ export default function Navbar() {
             </Link> */}
             
             <a
-              href="#waitlist"
+              href="/#waitlist"
               onClick={(e) => handleScroll(e, 'waitlist')}
               className="inline-flex items-center justify-center px-6 py-2 border border-transparent text-base font-medium rounded-lg text-white bg-pastel-blue hover:bg-pastel-blue/90 hover:scale-105 hover:shadow-lg transition-all duration-200 cursor-pointer"
             >

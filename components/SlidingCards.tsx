@@ -7,22 +7,28 @@ export default function SlidingCards() {
   const cards = [
     { 
       id: 1, 
-      title: "GCSE Results", 
-      description: "Grades 7-9", 
-      image: "/gcse.jpg" 
-    },
-    {
-      id: 2,
-      title: "A-Level Results",
-      description: "A*A*A",
-      image: "/alevel.jpg",
+      title: "University of Cambridge", 
+      description: "Second-Class Honours", 
+      image: "/images/UoC Degree Certificate.jpg" 
     },
     { 
-      id: 3, 
-      title: "University", 
+      id: 2, 
+      title: "University of Leicester", 
       description: "First Class Honours", 
       image: "/images/First Class Honours.png" 
-    }
+    },
+    // {
+    //   id: 3,
+    //   title: "A-Level Results",
+    //   description: "A*A*A",
+    //   image: "/alevel.jpg",
+    // },
+    // { 
+    //   id: 4, 
+    //   title: "GCSE Results", 
+    //   description: "Grades 7-9", 
+    //   image: "/gcse.jpg" 
+    // },
   ]
 
   return (
@@ -49,7 +55,7 @@ export default function SlidingCards() {
                 alt={card.title} 
                 width={300} 
                 height={200} 
-                className="w-full h-48 object-cover"
+                className="w-full h-48 object-contain"
               />
               <div className="p-4 space-y-2">
                 <h3 className="text-lg font-semibold text-gray-900">{card.title}</h3>

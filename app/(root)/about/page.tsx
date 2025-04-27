@@ -19,7 +19,7 @@ export default function About() {
           <div className="bg-white rounded-lg p-8 shadow-sm border border-blue-100 mb-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">The Beginning</h2>
             <p className="text-gray-600 mb-6">
-              Ace Education was founded by a group of recent graduates who excelled in their academic careers and secured positions at prestigious companies. We noticed a significant gap in the current tutoring landscape - while there were many tutors focusing solely on academic achievement, few were equipped to guide students toward their future careers.
+              Ace Educate was founded by a group of recent graduates who excelled in their academic careers and secured positions at prestigious companies. We noticed a significant gap in the current tutoring landscape - while there were many tutors focusing solely on academic achievement, few were equipped to guide students toward their future careers.
             </p>
             <p className="text-gray-600">
               Our journey began when we started informally mentoring younger students, sharing not just our academic knowledge, but also our recent experiences with university applications, internships, and job hunting. The impact we had on these students' lives inspired us to create something bigger.
@@ -47,7 +47,7 @@ export default function About() {
               <div>
                 <h3 className="text-xl font-semibold text-gray-900">Professional Success</h3>
                 <p className="text-gray-600">
-                  We secured positions at renowned companies like Accenture and Thales, gaining valuable insights into various career paths.
+                  We secured positions at renowned companies, gaining valuable insights into various career paths.
                 </p>
               </div>
             </div>
@@ -59,7 +59,7 @@ export default function About() {
               <div>
                 <h3 className="text-xl font-semibold text-gray-900">The Idea</h3>
                 <p className="text-gray-600">
-                  Recognizing the need for mentors who understand both academic excellence and career development, we created Ace Education.
+                  Recognizing the need for mentors who understand both academic excellence and career development, we created Ace Educate.
                 </p>
               </div>
             </div>
