@@ -12,32 +12,6 @@ interface Card {
 
 
 export default function SlidingCards( {items} : {items: Card[]} ) {
-  const cards = [
-    { 
-      id: 1, 
-      title: "University of Cambridge", 
-      description: "Second-Class Honours", 
-      image: "/images/UoC Degree Certificate.jpg" 
-    },
-    { 
-      id: 2, 
-      title: "University of Leicester", 
-      description: "First Class Honours", 
-      image: "/images/First Class Honours.PNG" 
-    },
-    // {
-    //   id: 3,
-    //   title: "A-Level Results",
-    //   description: "A*A*A",
-    //   image: "/alevel.jpg",
-    // },
-    // { 
-    //   id: 4, 
-    //   title: "GCSE Results", 
-    //   description: "Grades 7-9", 
-    //   image: "/gcse.jpg" 
-    // },
-  ]
 
   return (
     <div className="relative w-full overflow-hidden">
