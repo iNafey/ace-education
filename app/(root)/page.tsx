@@ -4,6 +4,7 @@ import { FaCheck, FaTimes, FaWhatsapp, FaEnvelope } from "react-icons/fa";
 import SlidingCards from "@/components/SlidingCards";
 import SignUpButton from "@/components/SignUpButton";
 import WaitlistCard from "@/components/WaitlistCard";
+import SuccessCollage from "@/components/SuccessCollage";
 export default function Home() {
 
 
@@ -21,7 +22,7 @@ export default function Home() {
               <h1 className="text-4xl sm:text-6xl font-bold tracking-tight text-ocean dark:text-white">Ace Educate</h1>
             </div>
             <div className="inline-block">
-              <span className="inline-flex items-center px-4 py-2 rounded-full border border-blue-200 bg-white/80 backdrop-blur-sm text-sm shadow-sm dark:text-midnight-grey dark:bg-white">
+              <span className="inline-flex flex-col sm:flex-row items-center px-4 py-2 rounded-full border border-blue-200 bg-white/80 backdrop-blur-sm text-sm shadow-sm dark:text-midnight-grey dark:bg-white">
                 Top-tier tutors at unbeatable prices 
                 <Link href="/about" className="ml-2 text-blue-600 hover:underline dark:text-navy-200">
                   Here&apos;s our story →
@@ -74,7 +75,7 @@ export default function Home() {
                 <p className="text-gray-600">Schedule sessions at your convenience. We offer lessons anytime during the academic year, although earlier is best for results!</p>
               </div>
               <div className="bg-white rounded-lg p-6 shadow-sm border border-blue-100 hover:border-blue-200 transition-all">
-                <h3 className="text-xl font-semibold mb-4 text-gray-900">Career Mentorship</h3>
+                <h3 className="text-xl font-semibold mb-4 text-gray-900">Academic & Career Mentorship</h3>
                 <p className="text-gray-600">Expert guidance on A-level and university applications. As well as helping you navigate career paths and opportunities.</p>
               </div>
             </div>
@@ -152,64 +153,10 @@ export default function Home() {
                 </div>
               </div>
               <div className="bg-white rounded-lg p-6 shadow-sm border border-blue-100 hover:border-blue-200 transition-all">
-                <h3 className="text-xl font-semibold mb-4 text-gray-900">Professional Success</h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <div className="bg-white rounded-lg shadow-sm border border-blue-100 overflow-hidden transition-all duration-300 hover:border-blue-200">
-                    <Image 
-                      src="/job1.jpg" 
-                      alt="Investment Banking" 
-                      width={300} 
-                      height={200} 
-                      className="w-full h-48 object-cover"
-                    />
-                    <div className="p-4 space-y-2">
-                      <h3 className="text-lg font-semibold text-gray-900">Investment Banking</h3>
-                      <p className="text-gray-600">Goldman Sachs</p>
-                    </div>
-                  </div>
-
-                  <div className="bg-white rounded-lg shadow-sm border border-blue-100 overflow-hidden transition-all duration-300 hover:border-blue-200">
-                    <Image 
-                      src="/images/Job Offer 2.PNG" 
-                      alt="Software Graduate Programme" 
-                      width={300} 
-                      height={200} 
-                      className="w-full h-48 object-contain"
-                    />
-                    <div className="p-4 space-y-2">
-                      <h3 className="text-lg font-semibold text-gray-900">Software Graduate Programme</h3>
-                      <p className="text-gray-600">Thales</p>
-                    </div>
-                  </div>
-
-                  <div className="bg-white rounded-lg shadow-sm border border-blue-100 overflow-hidden transition-all duration-300 hover:border-blue-200">
-                    <Image 
-                      src="/images/Job Offer 1.PNG" 
-                      alt="Modern Analyst (Software)" 
-                      width={300} 
-                      height={200} 
-                      className="w-full h-48 object-cover"
-                    />
-                    <div className="p-4 space-y-2">
-                      <h3 className="text-lg font-semibold text-gray-900">Modern Analyst (Software)</h3>
-                      <p className="text-gray-600">Accenture</p>
-                    </div>
-                  </div>
-
-                  <div className="bg-white rounded-lg shadow-sm border border-blue-100 overflow-hidden transition-all duration-300 hover:border-blue-200">
-                    <Image 
-                      src="/job2.jpg" 
-                      alt="Entrepreneurship" 
-                      width={300} 
-                      height={200} 
-                      className="w-full h-48 object-cover"
-                    />
-                    <div className="p-4 space-y-2">
-                      <h3 className="text-lg font-semibold text-gray-900">Entrepreneurship</h3>
-                      <p className="text-gray-600">Successful Startups</p>
-                    </div>
-                  </div>
-                </div>
+                <SuccessCollage />
+              </div>
+              <div className="bg-white rounded-lg p-6 shadow-sm border border-blue-100 hover:border-blue-200 transition-all">
+                <SuccessCollage />
               </div>
             </div>
           </section>
