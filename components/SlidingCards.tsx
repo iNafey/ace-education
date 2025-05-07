@@ -3,7 +3,15 @@
 import { motion } from "framer-motion"
 import Image from "next/image"
 
-export default function SlidingCards() {
+interface Card {
+  id: number,
+  title: string,
+  description: string,
+  image: string,
+}
+
+
+export default function SlidingCards( {items} : {items: Card[]} ) {
   const cards = [
     { 
       id: 1, 
@@ -36,18 +44,18 @@ export default function SlidingCards() {
       <motion.div
         className="flex gap-4"
         animate={{
-          x: [-800, 0],
+          x: [-300, 300],
         }}
         transition={{
           x: {
-            duration: 20,
+            duration: 15,
             repeat: Infinity,
             repeatType: "reverse",
             ease: "linear",
           },
         }}
       >
-        {cards.map((card) => (
+        {items.map((card) => (
           <div key={card.id} className="w-[300px] flex-shrink-0">
             <div className="bg-white rounded-lg shadow-sm border border-blue-100 overflow-hidden transition-all duration-300 hover:border-blue-200">
               <Image 

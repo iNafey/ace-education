@@ -18,10 +18,10 @@ export default function About() {
           <div className="bg-white rounded-lg p-8 shadow-sm border border-blue-100 mb-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">The Beginning</h2>
             <p className="text-gray-600 mb-6">
-              Ace Educate was founded by a group of recent graduates who excelled in their academic careers and secured positions at prestigious companies. We noticed a significant gap in the current tutoring landscape - while there were many tutors focusing solely on academic achievement, few were equipped to guide students toward their future careers.
+              Ace Educate was founded by two graduates who excelled in their academic careers and secured positions at prestigious companies. We noticed a significant gap in the current tutoring landscape - while there were many tutors focusing solely on academic achievement, few were equipped to guide students toward their future careers.
             </p>
             <p className="text-gray-600">
-              Our journey began when we started informally mentoring younger students, sharing not just our academic knowledge, but also our recent experiences with university applications, internships, and job hunting. The impact we had on these students&apos; lives inspired us to create something bigger.
+              Our journey began when we started mentoring younger students, sharing not just our academic knowledge, but also our recent experiences with university applications, internships, and job hunting. The impact we had on these students&apos; lives inspired us to create something bigger.
             </p>
           </div>
 
@@ -34,7 +34,8 @@ export default function About() {
               <div>
                 <h3 className="text-xl font-semibold text-gray-900">Academic Excellence</h3>
                 <p className="text-gray-600">
-                  Our founders achieved top grades in GCSEs and A-Levels, followed by First Class Honours degrees from leading universities.
+                  Our founders served as teaching assistants at their respective universities, understanding the need for personalized guidance in education from the bottom-up.
+                  Thus, all of our tutors achieved top grades in GCSEs and A-Levels, followed by top-notch degrees from leading universities.
                 </p>
               </div>
             </div>

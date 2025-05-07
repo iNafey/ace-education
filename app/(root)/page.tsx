@@ -6,10 +6,89 @@ import SignUpButton from "@/components/SignUpButton";
 import WaitlistCard from "@/components/WaitlistCard";
 import SuccessCollage from "@/components/SuccessCollage";
 export default function Home() {
+  const cards = [
+    { 
+      id: 1, 
+      title: "University of Cambridge", 
+      description: "Second-Class Honours", 
+      image: "/images/UoC Degree Certificate.jpg" 
+    },
+    { 
+      id: 2, 
+      title: "University of Leicester", 
+      description: "First Class Honours", 
+      image: "/images/First Class Honours.PNG" 
+    },
+    // {
+    //   id: 3,
+    //   title: "A-Level Results",
+    //   description: "A*A*A",
+    //   image: "/alevel.jpg",
+    // },
+    // { 
+    //   id: 4, 
+    //   title: "GCSE Results", 
+    //   description: "Grades 7-9", 
+    //   image: "/gcse.jpg" 
+    // },
+  ]
 
+  const uniSuccessItems = [
+    {
+      image: "/images/Cambridge Geography Offer.PNG",
+      title: "Geography, BA (Hons)",
+      institution: "University of Cambridge",
+      className: "w-full h-48 object-contain scale-110",
+    },
+    {
+      image: "/images/Lboro Offer.PNG",
+      title: "Computer Science, BSc (incl. scholarship)",
+      institution: "University of Loughborough",
+      className: "h-48 object-contain",
+    },
+    {
+      image: "/images/UoL Medicine Offer.PNG",
+      title: "Medicine, MBChB",
+      institution: "University of Leicester",
+      className: "w-full h-48 object-contain",
+    },
+    {
+      image: "/job2.jpg",
+      title: "Oxford Offer for Computer Science",
+      institution: "University of Oxford",
+      className: "w-full h-48 object-cover",
+    },
+  ];
+
+  const professionalSuccessItems = [
+    {
+      image: "/images/GS Offer.PNG",
+      title: "Investment Banking",
+      institution: "Goldman Sachs",
+      className: "w-full h-48 object-contain",
+    },
+    {
+      image: "/images/Job Offer 2.PNG",
+      title: "Software Graduate Programme",
+      institution: "Thales",
+      className: "w-full h-48 object-contain",
+    },
+    {
+      image: "/images/Job Offer 1.PNG",
+      title: "Modern Analyst (Software)",
+      institution: "Accenture",
+      className: "w-full h-48 object-cover",
+    },
+    {
+      image: "/job2.jpg",
+      title: "Entrepreneurship",
+      institution: "Self-employed",
+      className: "w-full h-48 object-cover",
+    },
+  ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-100 via-blue-50 to-blue-200 dark:bg-gradient-to-b dark:from-[#1e2129] dark:via-slate dark:from-[#1e2129]" >
+    <div className="min-h-screen bg-gradient-to-br from-blue-100 via-blue-50 to-blue-200 dark:bg-gradient-to-b dark:from-[#1e2129] dark:via-slate" >
       {/* Navbar */}
       
 
@@ -55,9 +134,11 @@ export default function Home() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="bg-white rounded-lg p-6 shadow-sm border border-blue-100 hover:border-blue-200 transition-all">
                 <h3 className="text-xl font-semibold mb-4 text-gray-900">Subjects</h3>
-                <p className="text-gray-600">Comprehensive tutoring in all major STEM subjects for GCSEs and A-Levels:</p>
+                <p className="text-gray-600">Comprehensive tutoring in all major STEM subjects for GCSEs and A-Levels: Biology, Business Studies, 
+                  Chemistry, Computer Science, Economics, English, Geography, Maths, and Physics.</p>
                 
-                <ul className="list-disc list-inside space-y-2 mt-5 text-gray-600">
+                
+                {/* <ul className="list-disc list-inside space-y-2 mt-5 text-gray-600">
                   <li>Biology</li>
                   <li>Business Studies</li>
                   <li>Chemistry</li>
@@ -67,7 +148,7 @@ export default function Home() {
                   <li>Geography</li>
                   <li>Maths</li>
                   <li>Physics</li>
-                </ul>
+                </ul> */}
                 
               </div>
               <div className="bg-white rounded-lg p-6 shadow-sm border border-blue-100 hover:border-blue-200 transition-all">
@@ -144,19 +225,20 @@ export default function Home() {
             <h2 className="text-3xl font-bold text-center mb-12 text-gray-900 dark:text-white">Our Proof of Success</h2>
             <div className="grid grid-cols-1 gap-8 max-w-3xl mx-auto">
               <div className="bg-white rounded-lg p-6 shadow-sm border border-blue-100 hover:border-blue-200 transition-all">
+                <h3 className="text-xl font-semibold mb-4 text-gray-900">Successful University Admissions</h3>
+                <SuccessCollage items={uniSuccessItems} />
+              </div>
+              
+              <div className="bg-white rounded-lg p-6 shadow-sm border border-blue-100 hover:border-blue-200 transition-all">
                 <h3 className="text-xl font-semibold mb-4 text-gray-900">Academic Achievements</h3>
                 <div className="space-y-4">
-                  {/* <Image src="/gcse.jpg" alt="GCSE Results" width={300} height={200} className="rounded-lg" />
-                  <Image src="/alevel.jpg" alt="A-Level Results" width={300} height={200} className="rounded-lg" />
-                  <Image src="/uni.jpg" alt="University Transcript" width={300} height={200} className="rounded-lg" /> */}
-                  <SlidingCards />
+                  <SlidingCards items={cards} />
                 </div>
               </div>
+
               <div className="bg-white rounded-lg p-6 shadow-sm border border-blue-100 hover:border-blue-200 transition-all">
-                <SuccessCollage />
-              </div>
-              <div className="bg-white rounded-lg p-6 shadow-sm border border-blue-100 hover:border-blue-200 transition-all">
-                <SuccessCollage />
+                <h3 className="text-xl font-semibold mb-4 text-gray-900">Professional Success</h3>
+                <SuccessCollage items={professionalSuccessItems} />
               </div>
             </div>
           </section>
@@ -167,8 +249,8 @@ export default function Home() {
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto px-4">
               {/* Pay as you go Tier */}
-              <div className="group bg-white rounded-2xl p-8 shadow-sm border-2 border-gray-200 hover:border-blue-500 hover:shadow-lg focus-within:border-blue-500 focus-within:shadow-lg transition-all cursor-pointer">
-                <div className="space-y-4">
+              <div className="group bg-white rounded-2xl p-8 shadow-sm border-2 border-gray-200 hover:border-blue-500 hover:shadow-lg focus-within:border-blue-500 focus-within:shadow-lg transition-all cursor-pointer flex flex-col">
+                <div className="space-y-4 flex-grow">
                   <h3 className="text-xl font-semibold text-gray-900">Pay as you go</h3>
                   <p className="text-gray-500">Perfect for occasional help</p>
                   <div className="flex items-baseline">
@@ -192,77 +274,80 @@ export default function Home() {
                       <span className="text-gray-600">Career or entrepreneurial advice available</span>
                     </li>
                   </ul>
-                  <a href="#waitlist" className="w-full mt-8 bg-white text-gray-900 border-2 border-gray-200 group-hover:border-blue-500 font-semibold py-3 px-6 rounded-lg transition-all inline-block text-center">
+                </div>
+                <a href="#waitlist" className="w-full mt-8 bg-white text-gray-900 border-2 border-gray-200 group-hover:border-blue-500 font-semibold py-3 px-6 rounded-lg transition-all inline-block text-center">
                     Join Waitlist
                   </a>
-                </div>
               </div>
 
               {/* Monthly Tier */}
-              <div className="group bg-white rounded-2xl p-8 shadow-lg border-2 border-gray-200 hover:border-blue-500 hover:shadow-xl focus-within:shadow-xl transition-all cursor-pointer relative">
-                <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-yellow-300 text-gray-900 px-4 py-1 rounded-full text-sm font-medium">
-                  Most popular
+              <div className="group bg-white rounded-2xl p-8 shadow-lg border-2 border-gray-200 hover:border-blue-500 hover:shadow-xl focus-within:shadow-xl transition-all cursor-pointer flex flex-col">
+                <div className="relative">
+                  <div className="absolute -top-12 left-1/2 -translate-x-1/2 bg-yellow-300 text-gray-900 px-3 py-1 rounded-full text-sm font-medium">
+                    Most popular
+                  </div>
                 </div>
-                <div className="space-y-4">
+                <div className="space-y-4 flex-grow">
                   <h3 className="text-xl font-semibold text-gray-900">Monthly Plan</h3>
                   <p className="text-gray-500">Perfect for weekly tutoring</p>
                   <div className="flex items-baseline">
-                    <span className="text-5xl font-bold text-gray-900">£100</span>
-                    <span className="text-gray-500 ml-2">/ month</span>
+                  <span className="text-5xl font-bold text-gray-900">£100</span>
+                  <span className="text-gray-500 ml-2">/ month</span>
                   </div>
-                  <p className="text-sm text-gray-500">Includes 4 hours of tutoring</p>
+                  {/* <p className="text-sm text-gray-500">Includes 4 hours of tutoring</p> */}
                   <ul className="space-y-4 mt-6">
-                    <li className="flex items-start gap-3">
-                      <FaCheck size={18} className="text-green-500 mt-1" />
-                      <span className="text-gray-600">4 (1 hour) classes included</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <FaCheck size={18} className="text-green-500 mt-1" />
-                      <span className="text-gray-600">Perfect for weekly tutoring</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <FaCheck size={22} className="text-green-500 mt-1" />
-                      <span className="text-gray-600">Problem solving, exam prep and career advice</span>
-                    </li>
+                  <li className="flex items-start gap-3">
+                    <FaCheck size={18} className="text-green-500 mt-1" />
+                    <span className="text-gray-600">4 (1 hour) classes included</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <FaCheck size={18} className="text-green-500 mt-1" />
+                    <span className="text-gray-600">Perfect for weekly tutoring</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <FaCheck size={22} className="text-green-500 mt-1" />
+                    <span className="text-gray-600">Problem solving, exam prep and career advice</span>
+                  </li>
                   </ul>
-                  <a href="#waitlist" className="w-full mt-8 bg-white text-gray-900 border-2 border-gray-200 group-hover:border-blue-500 font-semibold py-3 px-6 rounded-lg transition-all inline-block text-center">
-                    Join Waitlist
-                  </a>
                 </div>
+                <a href="#waitlist" className="w-full mt-8 bg-white text-gray-900 border-2 border-gray-200 group-hover:border-blue-500 font-semibold py-3 px-6 rounded-lg transition-all inline-block text-center self-end">
+                  Join Waitlist
+                </a>
               </div>
 
-              {/* Yearly Tier */}
-              <div className="group bg-white rounded-2xl p-8 shadow-sm border-2 border-gray-200 hover:border-blue-500 hover:shadow-lg focus-within:border-blue-500 focus-within:shadow-lg transition-all cursor-pointer">
-                <div className="space-y-4">
+                {/* Yearly Tier */}
+                <div className="group bg-white rounded-2xl p-8 shadow-sm border-2 border-gray-200 hover:border-blue-500 hover:shadow-lg focus-within:border-blue-500 focus-within:shadow-lg transition-all cursor-pointer flex flex-col">
+                <div className="space-y-4 flex-grow">
                   <h3 className="text-xl font-semibold text-gray-900">Academic Year</h3>
                   <p className="text-gray-500">For the best exam results</p>
                   <div className="flex items-baseline">
-                    <span className="text-5xl font-bold text-gray-900">£750</span>
-                    <span className="text-gray-500 ml-2">/ year</span>
+                  <span className="text-5xl font-bold text-gray-900">£750</span>
+                  <span className="text-gray-500 ml-2">/ year</span>
                   </div>
                   <ul className="space-y-4 mt-6">
-                    <li className="flex items-start gap-3">
-                      <FaCheck size={18} className="text-green-500 mt-1" />
-                      <span className="text-gray-600">Most cost effective option</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <FaCheck size={18} className="text-green-500 mt-1" />
-                      <span className="text-gray-600">Tutoring for an entire academic year</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <FaCheck size={18} className="text-green-500 mt-1" />
-                      <span className="text-gray-600">1 hour class every week till exams</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <FaCheck size={25} className="text-green-500 mt-1" />
-                      <span className="text-gray-600">Everything is taught before the exams (for best results)</span>
-                    </li>
+                  <li className="flex items-start gap-3">
+                    <FaCheck size={18} className="text-green-500 mt-1" />
+                    <span className="text-gray-600">Most cost effective option</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <FaCheck size={18} className="text-green-500 mt-1" />
+                    <span className="text-gray-600">32 weeks of tutoring</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <FaCheck size={18} className="text-green-500 mt-1" />
+                    <span className="text-gray-600">1 hour class every week till exams</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <FaCheck size={25} className="text-green-500 mt-1" />
+                    <span className="text-gray-600">Everything is taught before the exams (for best results)</span>
+                  </li>
                   </ul>
-                  <a href="#waitlist" className="w-full mt-8 bg-white text-gray-900 border-2 border-gray-200 group-hover:border-blue-500 font-semibold py-3 px-6 rounded-lg transition-all inline-block text-center">
-                    Join Waitlist
-                  </a>
                 </div>
-              </div>
+                <a href="#waitlist" className="w-full mt-8 bg-white text-gray-900 border-2 border-gray-200 group-hover:border-blue-500 font-semibold py-3 px-6 rounded-lg transition-all inline-block text-center self-end">
+                  Join Waitlist
+                </a>
+                </div>
+
             </div>
           </section>
 
