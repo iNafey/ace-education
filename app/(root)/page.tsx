@@ -38,7 +38,7 @@ export default function Home() {
       image: "/images/Cambridge Geography Offer.PNG",
       title: "Geography, BA (Hons)",
       institution: "University of Cambridge",
-      className: "w-full h-48 object-contain scale-110",
+      className: "h-48 object-contain",
     },
     {
       image: "/images/Lboro Offer.PNG",
@@ -50,13 +50,7 @@ export default function Home() {
       image: "/images/UoL Medicine Offer.PNG",
       title: "Medicine, MBChB",
       institution: "University of Leicester",
-      className: "w-full h-48 object-contain",
-    },
-    {
-      image: "/job2.jpg",
-      title: "Oxford Offer for Computer Science",
-      institution: "University of Oxford",
-      className: "w-full h-48 object-cover",
+      className: "h-48 object-contain",
     },
   ];
 
@@ -80,8 +74,8 @@ export default function Home() {
       className: "w-full h-48 object-cover",
     },
     {
-      image: "/job2.jpg",
-      title: "Entrepreneurship",
+      image: "/images/Tutoring Offer.PNG",
+      title: "Entrepreneurship & Tutoring",
       institution: "Self-employed",
       className: "w-full h-48 object-cover",
     },

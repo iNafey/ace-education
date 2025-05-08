@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { Dialog, DialogContent, DialogHeader, DialogTrigger, DialogTitle } from "./ui/dialog";
 
 interface SuccessItem {
     image: string;
@@ -17,16 +18,34 @@ export default function SuccessCollage({ items }: {items: SuccessItem[]}) {
         {items.map((item, index) => (
             <div
                 key={index}
-                className="bg-white rounded-lg shadow-sm border border-blue-100 overflow-hidden transition-all duration-300 hover:border-blue-200"
+                className="bg-white rounded-lg shadow-sm border border-blue-100 overflow-hidden transition-all duration-300 hover:border-blue-200 hover:shadow-lg hover:scale-105 flex flex-col"
             >
-                <Image 
-                    src={item.image} 
-                    alt={item.title} 
-                    width={300} 
-                    height={200} 
-                    className={item.className}
-                />
-                <div className="p-4 space-y-2">
+                <Dialog>
+                    <DialogTrigger className="">
+                        <Image 
+                        src={item.image} 
+                        alt={item.title} 
+                        width={300} 
+                        height={200} 
+                        className={item.className}
+                        />
+                    </DialogTrigger>
+                    <DialogContent className="border-4 border-sky">
+                        <DialogHeader>
+                            <DialogTitle>More info</DialogTitle>
+                        </DialogHeader>
+
+                        <Image 
+                        src={item.image} 
+                        alt={item.title}
+                        width={1200}
+                        height={800}
+                        className=''
+                        />
+                    </DialogContent>      
+                </Dialog>
+                
+                <div className="mt-auto p-4 space-y-2 border-t">
                     <h3 className="text-lg font-semibold text-gray-900">{item.title}</h3>
                     <p className="text-gray-600">{item.institution}</p>
                 </div>
