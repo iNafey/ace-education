@@ -29,7 +29,7 @@ const MarketingPolicy = () => {
           You have the right to opt out of marketing communications at any time:
         </p>
         <ul className="list-disc list-inside text-gray-600 mb-4">
-          <li>Email: Click the "Unsubscribe" link at the bottom of our marketing emails.</li>
+          <li>Email: Click the &quot;Unsubscribe&quot; link at the bottom of our marketing emails.</li>
           {/* <li>SMS/Text Messages: Reply "STOP" to any marketing text message you receive.</li> */}
           <li>Account Settings: Adjust your communication preferences in your account settings on our platform.</li>
           <li>Contact Us Directly: Email us at team@aceeducate.co.uk with your request.</li>
@@ -55,7 +55,7 @@ const MarketingPolicy = () => {
           All marketing activities are conducted in accordance with our Data Privacy Policy and applicable data protection laws, including the UK GDPR and the Privacy and Electronic Communications Regulations (PECR).
         </p>
 
-        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">9. Children's Privacy</h2>
+        <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">9. Children&apos;s Privacy</h2>
         <p className="text-gray-600 mb-4">
           Our marketing communications are directed at individuals who have provided their contact details in the form of email or mobile number. We do not knowingly collect or use personal data from children for marketing purposes.
         </p>
