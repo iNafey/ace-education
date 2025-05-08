@@ -62,9 +62,9 @@ export default function Home() {
       className: "w-full h-48 object-contain",
     },
     {
-      image: "/images/Job Offer 2.PNG",
-      title: "Software Graduate Programme",
-      institution: "Thales",
+      image: "/images/Yelp Offer.PNG",
+      title: "Junior Software Engineer",
+      institution: "Yelp",
       className: "w-full h-48 object-contain",
     },
     {

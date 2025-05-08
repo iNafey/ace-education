@@ -50,7 +50,8 @@ const Footer = () => {
                         <p className="text-foreground">© 2024 Ace Educate</p>
                         <div className="flex gap-10">
                             <Link href="/privacy-policy" className="text-foreground hover:text-gray-600 dark:hover:text-gray-300">Privacy Policy</Link>
-                            <Link href="/terms-and-conditions" className="text-foreground hover:text-gray-600 dark:hover:text-gray-300">Terms of Use</Link>
+                            {/* <Link href="/terms-and-conditions" className="text-foreground hover:text-gray-600 dark:hover:text-gray-300">Terms of Use</Link> */}
+                            <Link href="/marketing-policy" className="text-foreground hover:text-gray-600 dark:hover:text-gray-300">Marketing Policy</Link>
                         </div>
                     </div>
                     <div id="socials" className="flex gap-4">
