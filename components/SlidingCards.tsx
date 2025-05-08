@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion"
 import Image from "next/image"
-import { Dialog, DialogContent, DialogHeader, DialogTrigger, DialogTitle } from "./ui/dialog";
+import { Dialog, DialogContent, DialogHeader, DialogTrigger, DialogTitle, DialogDescription } from "./ui/dialog";
 
 
 interface Card {
@@ -47,6 +47,7 @@ export default function SlidingCards( {items} : {items: Card[]} ) {
                     <DialogContent className="border-4 border-sky">
                         <DialogHeader>
                             <DialogTitle>More info</DialogTitle>
+                            <DialogDescription />
                         </DialogHeader>
 
                         <Image 

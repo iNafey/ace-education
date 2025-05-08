@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Dialog, DialogContent, DialogHeader, DialogTrigger, DialogTitle } from "./ui/dialog";
+import { Dialog, DialogContent, DialogHeader, DialogTrigger, DialogTitle, DialogDescription } from "./ui/dialog";
 
 interface SuccessItem {
     image: string;
@@ -33,6 +33,7 @@ export default function SuccessCollage({ items }: {items: SuccessItem[]}) {
                     <DialogContent className="border-4 border-sky">
                         <DialogHeader>
                             <DialogTitle>More info</DialogTitle>
+                            <DialogDescription />
                         </DialogHeader>
 
                         <Image 
