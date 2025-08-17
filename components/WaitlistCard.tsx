@@ -22,6 +22,7 @@ import { useState } from 'react';
 import { Toaster } from 'sonner';
 import { toast } from "sonner";
 import { LoadingSpinner } from './LoadingSpinner';
+import Image from "next/image";
 
 
 // const mailerlite = new MailerLite({
@@ -84,7 +85,7 @@ export default function WaitlistCard() {
 
     return (
         <div className="bg-white rounded-lg p-8 shadow-sm border border-blue-100 hover:border-blue-200 transition-all max-w-2xl mx-auto">
-            <h2 className="text-3xl font-bold text-center mb-8 text-gray-900">Join Our Waitlist</h2>
+            <h2 className="text-3xl font-bold text-center mb-8 text-gray-900">Register Your Interest</h2>
             {/* <form className="space-y-4">
             
             <input
@@ -117,7 +118,7 @@ export default function WaitlistCard() {
                                 <FormControl>
                                     <Input placeholder="Enter your email" {...field} />
                                 </FormControl>
-                                <FormDescription className="text-gray-500">Primary method of contact - make sure to check your junk/spam folder</FormDescription>
+                                <FormDescription className="text-gray-500">Primary method of contact for important updates - make sure to check your junk/spam folder</FormDescription>
                                 <FormMessage className="text-red-500" />
                             </FormItem>
                         )} 
@@ -127,11 +128,13 @@ export default function WaitlistCard() {
                         name="phone" 
                         render={({field}) => (
                             <FormItem>
-                                <FormLabel className="text-gray-900">Phone <span className="text-gray-400">(Optional)</span></FormLabel>
+                                <FormLabel className="text-gray-900">Phone <span className="text-red-500">*</span></FormLabel>
                                 <FormControl>
                                     <Input placeholder="Enter your UK mobile number" {...field} />
                                 </FormControl>
-                                <FormDescription className="text-gray-500">Advised for faster communication</FormDescription>
+                                <FormDescription className="text-gray-500 flex items-center gap-2">
+                                    For tutor communication via <Image src="/whatsapp.svg" alt="WhatsApp" width={16} height={16} />WhatsApp    
+                                </FormDescription>
                                 <FormMessage className="text-red-500" />
                             </FormItem>
                         )}

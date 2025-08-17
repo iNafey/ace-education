@@ -42,7 +42,7 @@ export default function Home() {
     },
     {
       image: "/images/Lboro Offer.PNG",
-      title: "Computer Science, BSc (incl. scholarship)",
+      title: "Computer Science, BSc (with scholarship)",
       institution: "University of Loughborough",
       className: "h-48 object-contain",
     },
@@ -75,7 +75,7 @@ export default function Home() {
     },
     {
       image: "/images/Tutoring Offer.PNG",
-      title: "Entrepreneurship & Tutoring",
+      title: "Entrepreneurship (Online Tutoring)",
       institution: "Self-employed",
       className: "w-full h-48 object-cover",
     },
@@ -241,14 +241,55 @@ export default function Home() {
           <section className="mt-32 scroll-mt-24" id="pricing">
             <h2 className="text-3xl font-bold text-center mb-10 text-gray-900 dark:text-white">Pricing</h2>
             
+            
+
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto px-4">
+
+
+              {/* Group Session Tier */}
+              <div className="group bg-white rounded-2xl p-8 shadow-sm border-2 border-gray-200 hover:border-blue-500 hover:shadow-lg focus-within:border-blue-500 focus-within:shadow-lg transition-all cursor-pointer flex flex-col">
+                <div className="space-y-4 flex-grow">
+                  <div className="flex items-center gap-2">
+                    <h3 className="text-xl font-semibold text-gray-900">Group Lesson</h3>
+                    <span className="text-xs font-bold text-center text-blue-600 border border-blue-600 rounded-full py-1 px-2">BETA</span>
+                  </div>
+                  <p className="text-gray-500">Perfect for learning with others</p>
+                  <div className="flex items-baseline">
+                  <span className="text-5xl font-bold text-gray-900">£15</span>
+                  <span className="text-gray-500 ml-2">/ hour</span>
+                  </div>
+                  <ul className="space-y-4 mt-6">
+                  <li className="flex items-start gap-3">
+                    <FaCheck size={18} className="text-green-500 mt-1" />
+                    <span className="text-gray-600">Online classroom experience</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <FaCheck size={18} className="text-green-500 mt-1" />
+                    <span className="text-gray-600">Small groups of 3-5 students</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <FaCheck size={18} className="text-green-500 mt-1" />
+                    <span className="text-gray-600">Lesson times fixed*</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <FaCheck size={18} className="text-green-500 mt-1" />
+                    <span className="text-gray-600">Strictly for course content and exam prep</span>
+                  </li>
+                  </ul>
+                </div>
+                <span className="text-sm text-gray-500 mt-8">*Subject to tutor's availability</span>
+                <a href="#waitlist" className="w-full mt-8 bg-white text-gray-900 border-2 border-gray-200 group-hover:border-blue-500 font-semibold py-3 px-6 rounded-lg transition-all inline-block text-center self-end">
+                    Sign up
+                </a>
+                </div>
+
               {/* Pay as you go Tier */}
               <div className="group bg-white rounded-2xl p-8 shadow-sm border-2 border-gray-200 hover:border-blue-500 hover:shadow-lg focus-within:border-blue-500 focus-within:shadow-lg transition-all cursor-pointer flex flex-col">
                 <div className="space-y-4 flex-grow">
                   <h3 className="text-xl font-semibold text-gray-900">Pay as you go</h3>
                   <p className="text-gray-500">Perfect for occasional help</p>
                   <div className="flex items-baseline">
-                    <span className="text-5xl font-bold text-gray-900">£25</span>
+                    <span className="text-5xl font-bold text-gray-900">£30</span>
                     <span className="text-gray-500 ml-2">/ hour</span>
                   </div>
                   <div className="flex justify-start mb-2">
@@ -270,7 +311,7 @@ export default function Home() {
                   </ul>
                 </div>
                 <a href="#waitlist" className="w-full mt-8 bg-white text-gray-900 border-2 border-gray-200 group-hover:border-blue-500 font-semibold py-3 px-6 rounded-lg transition-all inline-block text-center">
-                    Join Waitlist
+                    Sign up
                   </a>
               </div>
 
@@ -278,7 +319,7 @@ export default function Home() {
               <div className="group bg-white rounded-2xl p-8 shadow-lg border-2 border-gray-200 hover:border-blue-500 hover:shadow-xl focus-within:shadow-xl transition-all cursor-pointer flex flex-col">
                 <div className="relative">
                   <div className="absolute -top-12 left-1/2 -translate-x-1/2 bg-yellow-300 text-gray-900 px-3 py-1 rounded-full text-sm font-medium">
-                    Most popular
+                    Recommended
                   </div>
                 </div>
                 <div className="space-y-4 flex-grow">
@@ -299,48 +340,22 @@ export default function Home() {
                     <span className="text-gray-600">Perfect for weekly tutoring</span>
                   </li>
                   <li className="flex items-start gap-3">
+                    <FaCheck size={18} className="text-green-500 mt-1" />
+                    <span className="text-gray-600">Can book all 4 classes at once*</span>
+                  </li>
+                  <li className="flex items-start gap-3">
                     <FaCheck size={22} className="text-green-500 mt-1" />
                     <span className="text-gray-600">Problem solving, exam prep and career advice</span>
                   </li>
                   </ul>
                 </div>
+                <span className="text-sm text-gray-500 mt-8">*Subject to tutor's availability</span>
                 <a href="#waitlist" className="w-full mt-8 bg-white text-gray-900 border-2 border-gray-200 group-hover:border-blue-500 font-semibold py-3 px-6 rounded-lg transition-all inline-block text-center self-end">
-                  Join Waitlist
+                  Sign up
                 </a>
               </div>
 
-                {/* Yearly Tier */}
-                <div className="group bg-white rounded-2xl p-8 shadow-sm border-2 border-gray-200 hover:border-blue-500 hover:shadow-lg focus-within:border-blue-500 focus-within:shadow-lg transition-all cursor-pointer flex flex-col">
-                <div className="space-y-4 flex-grow">
-                  <h3 className="text-xl font-semibold text-gray-900">Academic Year</h3>
-                  <p className="text-gray-500">For the best exam results</p>
-                  <div className="flex items-baseline">
-                  <span className="text-5xl font-bold text-gray-900">£750</span>
-                  <span className="text-gray-500 ml-2">/ year</span>
-                  </div>
-                  <ul className="space-y-4 mt-6">
-                  <li className="flex items-start gap-3">
-                    <FaCheck size={18} className="text-green-500 mt-1" />
-                    <span className="text-gray-600">Most cost effective option</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <FaCheck size={18} className="text-green-500 mt-1" />
-                    <span className="text-gray-600">32 weeks of tutoring</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <FaCheck size={18} className="text-green-500 mt-1" />
-                    <span className="text-gray-600">1 hour class every week till exams</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <FaCheck size={25} className="text-green-500 mt-1" />
-                    <span className="text-gray-600">Everything is taught before the exams (for best results)</span>
-                  </li>
-                  </ul>
-                </div>
-                <a href="#waitlist" className="w-full mt-8 bg-white text-gray-900 border-2 border-gray-200 group-hover:border-blue-500 font-semibold py-3 px-6 rounded-lg transition-all inline-block text-center self-end">
-                  Join Waitlist
-                </a>
-                </div>
+                
 
             </div>
           </section>
