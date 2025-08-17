@@ -30,7 +30,7 @@ export async function POST(request: NextRequest) {
     try {
       // Check if subscriber exists
       await mailerlite.subscribers.find(email);
-      return NextResponse.json({ error: "You are already subscribed to the waitlist" }, { status: 400 });
+      return NextResponse.json({ error: "You have already signed up, please check your email & WhatsApp for updates." }, { status: 400 });
     } catch (error) {
       console.error("Subscriber not found, creating new one:", error);
       // If subscriber doesn't exist, create new subscriber
@@ -43,7 +43,7 @@ export async function POST(request: NextRequest) {
       };
 
       await mailerlite.subscribers.createOrUpdate(params);
-      return NextResponse.json({ message: "You have been added to the waitlist" }, { status: 200 });
+      return NextResponse.json({ message: "You have successfully registered your interest, we will be in touch in the next 24-48 hours." }, { status: 200 });
     }
   } catch (err) {
      console.error("Error in POST handler:", err);
