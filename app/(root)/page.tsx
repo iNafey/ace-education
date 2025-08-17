@@ -277,7 +277,7 @@ export default function Home() {
                   </li>
                   </ul>
                 </div>
-                <span className="text-sm text-gray-500 mt-8">*Subject to tutor's availability</span>
+                <span className="text-sm text-gray-500 mt-8">*Subject to tutor&apos;s availability</span>
                 <a href="#waitlist" className="w-full mt-8 bg-white text-gray-900 border-2 border-gray-200 group-hover:border-blue-500 font-semibold py-3 px-6 rounded-lg transition-all inline-block text-center self-end">
                     Sign up
                 </a>
@@ -349,7 +349,7 @@ export default function Home() {
                   </li>
                   </ul>
                 </div>
-                <span className="text-sm text-gray-500 mt-8">*Subject to tutor's availability</span>
+                <span className="text-sm text-gray-500 mt-8">*Subject to tutor&apos;s availability</span>
                 <a href="#waitlist" className="w-full mt-8 bg-white text-gray-900 border-2 border-gray-200 group-hover:border-blue-500 font-semibold py-3 px-6 rounded-lg transition-all inline-block text-center self-end">
                   Sign up
                 </a>
