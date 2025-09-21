@@ -5,6 +5,8 @@ import SlidingCards from "@/components/SlidingCards";
 import SignUpButton from "@/components/SignUpButton";
 import WaitlistCard from "@/components/WaitlistCard";
 import SuccessCollage from "@/components/SuccessCollage";
+import LeadForm from "@/components/LeadForm";
+
 export default function Home() {
   const cards = [
     { 
@@ -156,6 +158,12 @@ export default function Home() {
             </div>
           </section>
 
+          {/* Lead Form */}
+          <section className="mt-32" id="enquiry-form">
+            {/* <h2 className="text-3xl font-bold text-center mb-12 text-gray-900 dark:text-white">Lead Form</h2> */}
+            <LeadForm />
+          </section>
+
           {/* Problems with Current Tutoring */}
           <section className="mt-32">
             <h2 className="text-3xl font-bold text-center mb-12 text-gray-900 dark:text-white">What&apos;s Currently Wrong with Tutoring?</h2>
@@ -278,18 +286,23 @@ export default function Home() {
                   </ul>
                 </div>
                 <span className="text-sm text-gray-500 mt-8">*Subject to tutor&apos;s availability</span>
-                <a href="#waitlist" className="w-full mt-8 bg-white text-gray-900 border-2 border-gray-200 group-hover:border-blue-500 font-semibold py-3 px-6 rounded-lg transition-all inline-block text-center self-end">
+                <a href="#enquiry-form" className="w-full mt-8 bg-white text-gray-900 border-2 border-gray-200 group-hover:border-blue-500 font-semibold py-3 px-6 rounded-lg transition-all inline-block text-center self-end">
                     Sign up
                 </a>
                 </div>
 
               {/* Pay as you go Tier */}
               <div className="group bg-white rounded-2xl p-8 shadow-sm border-2 border-gray-200 hover:border-blue-500 hover:shadow-lg focus-within:border-blue-500 focus-within:shadow-lg transition-all cursor-pointer flex flex-col">
+                <div className="relative">
+                  <div className="absolute -top-12 left-1/2 -translate-x-1/2 bg-yellow-300 text-gray-900 px-3 py-1 rounded-full text-sm font-medium">
+                    Recommended
+                  </div>
+                </div>
                 <div className="space-y-4 flex-grow">
-                  <h3 className="text-xl font-semibold text-gray-900">Pay as you go</h3>
+                  <h3 className="text-xl font-semibold text-gray-900">1-on-1 Lesson</h3>
                   <p className="text-gray-500">Perfect for occasional help</p>
                   <div className="flex items-baseline">
-                    <span className="text-5xl font-bold text-gray-900">£30</span>
+                    <span className="text-5xl font-bold text-gray-900">£25</span>
                     <span className="text-gray-500 ml-2">/ hour</span>
                   </div>
                   <div className="flex justify-start mb-2">
@@ -310,20 +323,15 @@ export default function Home() {
                     </li>
                   </ul>
                 </div>
-                <a href="#waitlist" className="w-full mt-8 bg-white text-gray-900 border-2 border-gray-200 group-hover:border-blue-500 font-semibold py-3 px-6 rounded-lg transition-all inline-block text-center">
+                <a href="#enquiry-form" className="w-full mt-8 bg-white text-gray-900 border-2 border-gray-200 group-hover:border-blue-500 font-semibold py-3 px-6 rounded-lg transition-all inline-block text-center">
                     Sign up
                   </a>
               </div>
 
               {/* Monthly Tier */}
               <div className="group bg-white rounded-2xl p-8 shadow-lg border-2 border-gray-200 hover:border-blue-500 hover:shadow-xl focus-within:shadow-xl transition-all cursor-pointer flex flex-col">
-                <div className="relative">
-                  <div className="absolute -top-12 left-1/2 -translate-x-1/2 bg-yellow-300 text-gray-900 px-3 py-1 rounded-full text-sm font-medium">
-                    Recommended
-                  </div>
-                </div>
                 <div className="space-y-4 flex-grow">
-                  <h3 className="text-xl font-semibold text-gray-900">Monthly Plan</h3>
+                  <h3 className="text-xl font-semibold text-gray-900">1-on-1 Lessons (Monthly Plan)</h3>
                   <p className="text-gray-500">Perfect for weekly tutoring</p>
                   <div className="flex items-baseline">
                   <span className="text-5xl font-bold text-gray-900">£100</span>
@@ -350,7 +358,7 @@ export default function Home() {
                   </ul>
                 </div>
                 <span className="text-sm text-gray-500 mt-8">*Subject to tutor&apos;s availability</span>
-                <a href="#waitlist" className="w-full mt-8 bg-white text-gray-900 border-2 border-gray-200 group-hover:border-blue-500 font-semibold py-3 px-6 rounded-lg transition-all inline-block text-center self-end">
+                <a href="#enquiry-form" className="w-full mt-8 bg-white text-gray-900 border-2 border-gray-200 group-hover:border-blue-500 font-semibold py-3 px-6 rounded-lg transition-all inline-block text-center self-end">
                   Sign up
                 </a>
               </div>
@@ -394,7 +402,7 @@ export default function Home() {
               </div>
               <div className="flex items-center space-x-4">
                 <FaWhatsapp className="text-2xl text-blue-600 dark:text-blue-400" />
-                <span className="text-gray-600 dark:text-gray-200">+44 123 456 7890</span>
+                <span className="text-gray-600 dark:text-gray-200">+44 7459 627884</span>
               </div>
               {/* <div className="flex space-x-6">
                 <Link href="https://facebook.com" className="hover:text-blue-600 dark:hover:text-navy-200 transition-colors">

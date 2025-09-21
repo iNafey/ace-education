@@ -64,18 +64,18 @@ export function MobileMenu() {
           <Separator className="bg-gray-800/50" />
           <div className="flex flex-col space-y-2">
             <Link 
-              href="mailto:contact@aceeducation.com" 
+              href="mailto:team@aceeducate.co.uk" 
               className="text-sm text-gray-500 hover:text-pastel-blue transition-colors"
               onClick={() => setOpen(false)}
             >
-              contact@aceeducation.com
+              team@aceeducate.co.uk
             </Link>
             <Link 
-              href="https://wa.me/441234567890" 
+              href="https://wa.me/447459627884" 
               className="text-sm text-gray-500 hover:text-pastel-blue transition-colors"
               onClick={() => setOpen(false)}
             >
-              +44 123 456 7890
+              +44 7459 627884
             </Link>
           </div>
         </div>

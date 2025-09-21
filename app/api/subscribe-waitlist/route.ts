@@ -6,7 +6,7 @@ import { z } from "zod";
 // Define request schema
 const RequestSchema = z.object({
   email: z.string().email({ message: "Please enter a valid email address" }), 
-  phone: z.string()
+  // phone: z.string() // Commented out - phone number requirement removed
 });
 
 // Define API route handler
@@ -14,8 +14,10 @@ export async function POST(request: NextRequest) {
   try {
     // Parse request body
     const body = await request.json();
-    const { email, phone } = RequestSchema.parse(body);
-    console.log("Parsed email:", email, "phone:", phone);
+    const { email } = RequestSchema.parse(body);
+    // const { email, phone } = RequestSchema.parse(body); // Commented out - phone number requirement removed
+    console.log("Parsed email:", email);
+    // console.log("Parsed email:", email, "phone:", phone); // Commented out
 
     // Initialize MailerLite client
     if (!process.env.MAILERLITE_API_CRUD_TOKEN) {
@@ -30,20 +32,20 @@ export async function POST(request: NextRequest) {
     try {
       // Check if subscriber exists
       await mailerlite.subscribers.find(email);
-      return NextResponse.json({ error: "You have already signed up, please check your email & WhatsApp for updates." }, { status: 400 });
+      return NextResponse.json({ error: "You have already signed up, please check your email for updates." }, { status: 400 });
     } catch (error) {
       console.error("Subscriber not found, creating new one:", error);
       // If subscriber doesn't exist, create new subscriber
       const params = {
         email: email,
         fields: {
-          phone: phone
+          // phone: phone // Commented out - phone number requirement removed
         },
         groups: ["152833421267175308"],
       };
 
       await mailerlite.subscribers.createOrUpdate(params);
-      return NextResponse.json({ message: "You have successfully registered your interest, we will be in touch in the next 24-48 hours." }, { status: 200 });
+      return NextResponse.json({ message: "You have successfully registered your interest, we will be in touch soon." }, { status: 200 });
     }
   } catch (err) {
      console.error("Error in POST handler:", err);

@@ -22,7 +22,6 @@ import { useState } from 'react';
 import { Toaster } from 'sonner';
 import { toast } from "sonner";
 import { LoadingSpinner } from './LoadingSpinner';
-import Image from "next/image";
 
 
 // const mailerlite = new MailerLite({
@@ -31,12 +30,12 @@ import Image from "next/image";
 
 const formSchema = z.object({
     email: z.string().email({message: "Please enter a valid email"}),
-    phone: z.string()
-      .regex(/^(\+44\s?7\d{3}|\(?07\d{3}\)?)\s?\d{3}\s?\d{3}$/, {
-        message: "Invalid UK mobile number"
-      })
-      .optional()
-      .or(z.literal(""))
+    // phone: z.string()
+    //   .regex(/^(\+44\s?7\d{3}|\(?07\d{3}\)?)\s?\d{3}\s?\d{3}$/, {
+    //     message: "Invalid UK mobile number"
+    //   })
+    //   .optional()
+    //   .or(z.literal("")) // Commented out - phone number requirement removed
   })
 
 export default function WaitlistCard() {
@@ -50,7 +49,7 @@ export default function WaitlistCard() {
         resolver: zodResolver(formSchema),
         defaultValues: {
             email: "",
-            phone: ""
+            // phone: "" // Commented out - phone number requirement removed
         }
     })
 
@@ -106,7 +105,7 @@ export default function WaitlistCard() {
                 Sign Up
             </button>
             </form> */}
-            <p className="text-gray-500 mb-6">We&apos;ll contact you to schedule your first session.</p>
+            <p className="text-gray-500 mb-6">Our platform is under works but you can still sign up for early access and we&apos;ll let you know when it&apos;s ready.</p>
             <Form {...form}>
                 <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
                     <FormField
@@ -118,12 +117,12 @@ export default function WaitlistCard() {
                                 <FormControl>
                                     <Input placeholder="Enter your email" {...field} />
                                 </FormControl>
-                                <FormDescription className="text-gray-500">Primary method of contact for important updates - make sure to check your junk/spam folder</FormDescription>
+                                <FormDescription className="text-gray-500">For important updates - make sure to check your junk/spam folder</FormDescription>
                                 <FormMessage className="text-red-500" />
                             </FormItem>
                         )} 
                     />
-                    <FormField
+                    {/* <FormField
                         control={form.control}
                         name="phone" 
                         render={({field}) => (
@@ -138,7 +137,7 @@ export default function WaitlistCard() {
                                 <FormMessage className="text-red-500" />
                             </FormItem>
                         )}
-                    />
+                    /> */} {/* Commented out - phone number requirement removed */}
                     {status === "loading" ? (
                         <div className="flex items-center justify-center">
                             <LoadingSpinner className="w-4 h-4 mr-2" />
