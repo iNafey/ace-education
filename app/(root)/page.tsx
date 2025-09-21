@@ -112,7 +112,9 @@ export default function Home() {
             <p className="text-xl text-gray-600 max-w-2xl mx-auto dark:text-gray-200">
               Ace Educate is the ultimate online tutoring platform to prepare students for GCSEs and A-Levels.
             </p>
-
+            <p className="text-base text-gray-600 max-w-2xl mx-auto dark:text-gray-200">
+              For students, parents and tutors, get started today!
+            </p>
             <SignUpButton />
 
             {/* Scroll Indicator */}
