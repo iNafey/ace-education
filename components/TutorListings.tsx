@@ -44,16 +44,20 @@ export default function TutorListings({ tutors }: TutorListingsProps) {
       if (filters.teacherType === 'Tutor' && !tutor.isTutor) return false;
       if (filters.teacherType === 'Mentor' && !tutor.canMentor) return false;
       
-      // Subject filter
-      if (filters.subject !== 'All subjects') {
+      // Subject and Level filter (must match both together)
+      if (filters.subject !== 'All subjects' && filters.level !== 'All levels') {
+        const hasSubjectAndLevel = tutor.subjectsOffered.some(offering => 
+          offering.subject === filters.subject && offering.level === filters.level
+        );
+        if (!hasSubjectAndLevel) return false;
+      } else if (filters.subject !== 'All subjects') {
+        // Only subject filter
         const hasSubject = tutor.subjectsOffered.some(offering => 
           offering.subject === filters.subject
         );
         if (!hasSubject) return false;
-      }
-      
-      // Level filter
-      if (filters.level !== 'All levels') {
+      } else if (filters.level !== 'All levels') {
+        // Only level filter
         const hasLevel = tutor.subjectsOffered.some(offering => 
           offering.level === filters.level
         );

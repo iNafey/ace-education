@@ -64,7 +64,7 @@ export default function Home() {
       className: "w-full h-48 object-contain",
     },
     {
-      image: "/images/Yelp Offer.PNG",
+      image: "/images/Yelp Offer.png",
       title: "Junior Software Engineer",
       institution: "Yelp",
       className: "w-full h-48 object-contain",
@@ -144,7 +144,7 @@ export default function Home() {
               {/* Call-to-Action Text and Button */}
               <div className="text-center">
                 <p className="text-lg text-gray-700 dark:text-gray-300 mb-6">
-                  Choose from one of the tutors above or find more. If you&apos;re still unsure, we will find the perfect tutor for you.
+                  Choose from tutors like the ones above or find more. If you&apos;re still unsure, we will find the perfect tutor for you.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                   <Link 

@@ -63,14 +63,12 @@ export default function FindTutor() {
       isTutor: true,
       canMentor: true,
       subjects: ["Chemistry", "Biology", "Physics"],
-      image: "/images/Darshan Profile.jpg",
+      image: "/images/Darshan Profile New.jpg",
       subjectsOffered: [
         { subject: "Chemistry", level: "GCSE", price: "£25/hr" },
         { subject: "Biology", level: "GCSE", price: "£25/hr" },
         { subject: "Physics", level: "GCSE", price: "£25/hr" },
-        { subject: "Chemistry", level: "A-Level", price: "£30/hr" },
         { subject: "Biology", level: "A-Level", price: "£30/hr" },
-        { subject: "Physics", level: "A-Level", price: "£30/hr" }
       ]
     },
     {

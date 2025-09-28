@@ -129,9 +129,10 @@ export default function TutorFilters({ filters, setFilters }: TutorFiltersProps)
                 <select 
                   value={filters.price}
                   onChange={(e) => setFilters({...filters, price: e.target.value})}
-                  className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-ocean focus:border-ocean appearance-none"
+                  disabled
+                  className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-gray-100 dark:bg-gray-600 text-gray-500 dark:text-gray-400 cursor-not-allowed appearance-none"
                 >
-                  <option>All prices</option>
+                  <option>All prices (coming soon)</option>
                   <option>under £20</option>
                   <option>£20-£25</option>
                   <option>over £25</option>

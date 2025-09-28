@@ -99,7 +99,7 @@ const tutors = [
     isTutor: true,
     canMentor: true,
     subjects: ["Chemistry", "Biology", "Physics"],
-    image: "/images/Darshan Profile.jpg",
+    image: "/images/Darshan Profile New.jpg",
     about: "I am a fifth-year student, currently studying Medicine at uni, I offer lessons for Biology, Chemistry and Physics at A-Level and GCSE. I can also help with Medicine applications for top UK universities as well as UCAT preparation.",
     qualifications: [
       { subject: "Chemistry", qualification: "A-Level", grade: "A*" },
@@ -120,9 +120,7 @@ const tutors = [
       { subject: "Chemistry", level: "GCSE", price: "£25/hr" },
       { subject: "Biology", level: "GCSE", price: "£25/hr" },
       { subject: "Physics", level: "GCSE", price: "£25/hr" },
-      { subject: "Chemistry", level: "A-Level", price: "£30/hr" },
       { subject: "Biology", level: "A-Level", price: "£30/hr" },
-      { subject: "Physics", level: "A-Level", price: "£30/hr" },
     ]
   },
   {
