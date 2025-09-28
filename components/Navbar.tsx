@@ -7,8 +7,10 @@ import { MobileMenu } from './MobileMenu';
 
 export default function Navbar() {
   const [theme, setTheme] = useState('light');
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
+    setMounted(true);
     const savedTheme = localStorage.getItem('theme') || 'light';
     setTheme(savedTheme);
     if (savedTheme === 'dark') {
@@ -74,6 +76,12 @@ export default function Navbar() {
               Services
             </Link>
             <Link 
+              href="/find-tutor"
+              className="text-foreground hover:text-gray-600 dark:hover:text-gray-300 px-3 py-2 cursor-pointer"
+            >
+              Find a tutor
+            </Link>
+            <Link 
               href="/#pricing" 
               // onClick={(e) => handleScroll(e, 'pricing')}
               scroll={true}
@@ -98,7 +106,7 @@ export default function Navbar() {
               className="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800"
               aria-label="Toggle theme"
             >
-              {theme === 'light' ? '🌙' : '☀️'}
+              {mounted ? (theme === 'light' ? '🌙' : '☀️') : '🌙'}
             </button>
             {/* <Link href="/login" className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white px-3 py-2">
                 Login
@@ -121,7 +129,7 @@ export default function Navbar() {
               className="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800"
               aria-label="Toggle theme"
             >
-              {theme === 'light' ? '🌙' : '☀️'}
+              {mounted ? (theme === 'light' ? '🌙' : '☀️') : '🌙'}
             </button>
             <MobileMenu />
           </div>

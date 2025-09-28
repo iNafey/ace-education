@@ -256,72 +256,68 @@ export default function Home() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto px-4">
 
 
-              {/* Group Session Tier */}
+              {/* GCSE Tutoring Tier */}
               <div className="group bg-white rounded-2xl p-8 shadow-sm border-2 border-gray-200 hover:border-blue-500 hover:shadow-lg focus-within:border-blue-500 focus-within:shadow-lg transition-all cursor-pointer flex flex-col">
                 <div className="space-y-4 flex-grow">
                   <div className="flex items-center gap-2">
-                    <h3 className="text-xl font-semibold text-gray-900">Group Lesson</h3>
-                    <span className="text-xs font-bold text-center text-blue-600 border border-blue-600 rounded-full py-1 px-2">BETA</span>
+                    <h3 className="text-xl font-semibold text-gray-900">GCSE Tutoring</h3>
+                    {/* <span className="text-xs font-bold text-center text-blue-600 border border-blue-600 rounded-full py-1 px-2">POPULAR</span> */}
                   </div>
-                  <p className="text-gray-500">Perfect for learning with others</p>
+                  <p className="text-gray-500">Perfect for GCSE students</p>
                   <div className="flex items-baseline">
-                  <span className="text-5xl font-bold text-gray-900">£15</span>
+                  <span className="text-5xl font-bold text-gray-900">£25</span>
                   <span className="text-gray-500 ml-2">/ hour</span>
                   </div>
                   <ul className="space-y-4 mt-6">
                   <li className="flex items-start gap-3">
-                    <FaCheck size={18} className="text-green-500 mt-1" />
-                    <span className="text-gray-600">Online classroom experience</span>
+                    <span className="w-2 h-2 bg-gray-400 rounded-full mt-2 flex-shrink-0"></span>
+                    <span className="text-gray-600">Comprehensive GCSE subject coverage</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <FaCheck size={18} className="text-green-500 mt-1" />
-                    <span className="text-gray-600">Small groups of 3-5 students</span>
+                    <span className="w-2 h-2 bg-gray-400 rounded-full mt-2 flex-shrink-0"></span>
+                    <span className="text-gray-600">Exam technique and revision strategies</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <FaCheck size={18} className="text-green-500 mt-1" />
-                    <span className="text-gray-600">Lesson times fixed*</span>
+                    <span className="w-2 h-2 bg-gray-400 rounded-full mt-2 flex-shrink-0"></span>
+                    <span className="text-gray-600">Past paper practice and mock exams</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <FaCheck size={18} className="text-green-500 mt-1" />
-                    <span className="text-gray-600">Strictly for course content and exam prep</span>
+                    <span className="w-2 h-2 bg-gray-400 rounded-full mt-2 flex-shrink-0"></span>
+                    <span className="text-gray-600">Personalized learning plans</span>
                   </li>
                   </ul>
                 </div>
-                <span className="text-sm text-gray-500 mt-8">*Subject to tutor&apos;s availability</span>
+                
                 <a href="#enquiry-form" className="w-full mt-8 bg-white text-gray-900 border-2 border-gray-200 group-hover:border-blue-500 font-semibold py-3 px-6 rounded-lg transition-all inline-block text-center self-end">
                     Sign up
                 </a>
                 </div>
 
-              {/* Pay as you go Tier */}
+              {/* A-Level Tutoring Tier */}
               <div className="group bg-white rounded-2xl p-8 shadow-sm border-2 border-gray-200 hover:border-blue-500 hover:shadow-lg focus-within:border-blue-500 focus-within:shadow-lg transition-all cursor-pointer flex flex-col">
-                <div className="relative">
-                  <div className="absolute -top-12 left-1/2 -translate-x-1/2 bg-yellow-300 text-gray-900 px-3 py-1 rounded-full text-sm font-medium">
-                    Recommended
-                  </div>
-                </div>
                 <div className="space-y-4 flex-grow">
-                  <h3 className="text-xl font-semibold text-gray-900">1-on-1 Lesson</h3>
-                  <p className="text-gray-500">Perfect for occasional help</p>
+                  <h3 className="text-xl font-semibold text-gray-900">A-Level Tutoring</h3>
+                  <p className="text-gray-500">Perfect for A-Level students</p>
                   <div className="flex items-baseline">
-                    <span className="text-5xl font-bold text-gray-900">£25</span>
+                    <span className="text-5xl font-bold text-gray-900">£30</span>
                     <span className="text-gray-500 ml-2">/ hour</span>
-                  </div>
-                  <div className="flex justify-start mb-2">
-                    <h3 className="text-sm font-bold text-center text-red-500 border-2 border-red-500 rounded-full py-1 px-2 inline-block">Limited time only!</h3>
                   </div>
                   <ul className="space-y-4 mt-6">
                     <li className="flex items-start gap-3">
-                      <FaCheck className="text-green-500 mt-1" />
-                      <span className="text-gray-600">Great for finding the right tutor</span>
+                      <span className="w-2 h-2 bg-gray-400 rounded-full mt-2 flex-shrink-0"></span>
+                      <span className="text-gray-600">Advanced A-Level subject expertise</span>
                     </li>
                     <li className="flex items-start gap-3">
-                      <FaCheck className="text-green-500 mt-1" />
-                      <span className="text-gray-600">Ad-hoc lessons or mock exam prep</span>
+                      <span className="w-2 h-2 bg-gray-400 rounded-full mt-2 flex-shrink-0"></span>
+                      <span className="text-gray-600">University application preparation</span>
                     </li>
                     <li className="flex items-start gap-3">
-                      <FaCheck className="text-green-500 mt-1" />
-                      <span className="text-gray-600">Career or entrepreneurial advice available</span>
+                      <span className="w-2 h-2 bg-gray-400 rounded-full mt-2 flex-shrink-0"></span>
+                      <span className="text-gray-600">Personal statement and interview guidance</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <span className="w-2 h-2 bg-gray-400 rounded-full mt-2 flex-shrink-0"></span>
+                      <span className="text-gray-600">Career pathway exploration</span>
                     </li>
                   </ul>
                 </div>
@@ -330,36 +326,34 @@ export default function Home() {
                   </a>
               </div>
 
-              {/* Monthly Tier */}
+              {/* Mentoring Tier */}
               <div className="group bg-white rounded-2xl p-8 shadow-lg border-2 border-gray-200 hover:border-blue-500 hover:shadow-xl focus-within:shadow-xl transition-all cursor-pointer flex flex-col">
                 <div className="space-y-4 flex-grow">
-                  <h3 className="text-xl font-semibold text-gray-900">1-on-1 Lessons (Monthly Plan)</h3>
-                  <p className="text-gray-500">Perfect for weekly tutoring</p>
+                  <h3 className="text-xl font-semibold text-gray-900">Mentoring</h3>
+                  <p className="text-gray-500">Perfect for career and academic guidance</p>
                   <div className="flex items-baseline">
-                  <span className="text-5xl font-bold text-gray-900">£100</span>
-                  <span className="text-gray-500 ml-2">/ month</span>
+                  <span className="text-5xl font-bold text-gray-900">£30</span>
+                  <span className="text-gray-500 ml-2">/ hour</span>
                   </div>
-                  {/* <p className="text-sm text-gray-500">Includes 4 hours of tutoring</p> */}
                   <ul className="space-y-4 mt-6">
                   <li className="flex items-start gap-3">
-                    <FaCheck size={18} className="text-green-500 mt-1" />
-                    <span className="text-gray-600">4 (1 hour) classes included</span>
+                    <span className="w-2 h-2 bg-gray-400 rounded-full mt-2 flex-shrink-0"></span>
+                    <span className="text-gray-600">Personal statement review and guidance</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <FaCheck size={18} className="text-green-500 mt-1" />
-                    <span className="text-gray-600">Perfect for weekly tutoring</span>
+                    <span className="w-2 h-2 bg-gray-400 rounded-full mt-2 flex-shrink-0"></span>
+                    <span className="text-gray-600">University application support</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <FaCheck size={18} className="text-green-500 mt-1" />
-                    <span className="text-gray-600">Can book all 4 classes at once*</span>
+                    <span className="w-2 h-2 bg-gray-400 rounded-full mt-2 flex-shrink-0"></span>
+                    <span className="text-gray-600">Career pathway and degree choice advice</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <FaCheck size={22} className="text-green-500 mt-1" />
-                    <span className="text-gray-600">Problem solving, exam prep and career advice</span>
+                    <span className="w-2 h-2 bg-gray-400 rounded-full mt-2 flex-shrink-0"></span>
+                    <span className="text-gray-600">CV writing and interview preparation</span>
                   </li>
                   </ul>
                 </div>
-                <span className="text-sm text-gray-500 mt-8">*Subject to tutor&apos;s availability</span>
                 <a href="#enquiry-form" className="w-full mt-8 bg-white text-gray-900 border-2 border-gray-200 group-hover:border-blue-500 font-semibold py-3 px-6 rounded-lg transition-all inline-block text-center self-end">
                   Sign up
                 </a>

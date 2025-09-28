@@ -41,6 +41,13 @@ export function MobileMenu() {
             Services
           </Link>
           <Link 
+            href="/find-tutor"
+            className="text-lg font-medium text-white hover:text-pastel-blue transition-colors"
+            onClick={() => setOpen(false)}
+          >
+            Find a tutor
+          </Link>
+          <Link 
             href="/#pricing" 
             className="text-lg font-medium text-white hover:text-pastel-blue transition-colors"
             onClick={() => setOpen(false)}
