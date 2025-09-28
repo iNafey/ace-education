@@ -91,7 +91,7 @@ export default function FindTutor() {
     },
     {
       id: 5,
-      name: "Andrew",
+      name: "Andrej P.",
       university: "University of Cambridge - Mathematics (now PhD student)",
       bio: "Cambridge Maths graduate now doing a PhD in Machine Learning at Edinburgh University. I offer lessons for Maths, and Further Maths at A-Level and GCSE. Can also provide specialist Mathematics application support for the best universities.",
       tutoringStartingPrice: "£25",
@@ -102,7 +102,7 @@ export default function FindTutor() {
       isTutor: true,
       canMentor: true,
       subjects: ["Mathematics", "Further Mathematics"],
-      image: "",
+      image: "/images/Andrej Profile New.jpg",
       subjectsOffered: [
         { subject: "Mathematics", level: "GCSE", price: "£25/hr" },
         { subject: "Further Mathematics", level: "GCSE", price: "£25/hr" },
@@ -112,7 +112,7 @@ export default function FindTutor() {
     },
     {
       id: 6,
-      name: "Parth",
+      name: "Parth S.",
       university: "University of Leicester - Physics",
       bio: "Currently studying Physics at uni, I offer lessons for Maths, Physics, Chemistry and Biology at A-Level and GCSE. I can also help with a-level and university applications as per your needs.",
       tutoringStartingPrice: "£25",

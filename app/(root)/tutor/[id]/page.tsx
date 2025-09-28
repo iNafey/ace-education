@@ -162,7 +162,7 @@ const tutors = [
   },
   {
     id: 5,
-    name: "Andrew",
+    name: "Andrej P.",
     university: "University of Cambridge - Mathematics (now PhD student)",
     tutoringStartingPrice: "£25",
     mentoringPrice: "£30",
@@ -175,7 +175,7 @@ const tutors = [
     isTutor: true,  
     canMentor: true,
     subjects: ["Mathematics", "Further Mathematics"],
-    image: "",
+    image: "/images/Andrej Profile New.jpg",
     about: "Cambridge Maths graduate now doing a PhD in Machine Learning at Edinburgh University. I offer lessons for Maths, and Further Maths at A-Level and GCSE. Can also provide specialist Mathematics application support for the best universities.",
     qualifications: [
       { subject: "Mathematics", qualification: "Bachelor's Degree (Cambridge)", grade: "First Class Honours" },

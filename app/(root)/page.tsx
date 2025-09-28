@@ -1,39 +1,39 @@
 import Image from "next/image";
 import Link from "next/link";
 import { FaCheck, FaTimes, FaWhatsapp, FaEnvelope } from "react-icons/fa";
-import SlidingCards from "@/components/SlidingCards";
 import SignUpButton from "@/components/SignUpButton";
 import WaitlistCard from "@/components/WaitlistCard";
 import SuccessCollage from "@/components/SuccessCollage";
 import LeadForm from "@/components/LeadForm";
+import PricingButton from "@/components/PricingButton";
 
 export default function Home() {
-  const cards = [
-    { 
-      id: 1, 
-      title: "University of Cambridge", 
-      description: "Second-Class Honours", 
-      image: "/images/UoC Degree Certificate.jpg" 
-    },
-    { 
-      id: 2, 
-      title: "University of Leicester", 
-      description: "First Class Honours", 
-      image: "/images/First Class Honours.PNG" 
-    },
-    // {
-    //   id: 3,
-    //   title: "A-Level Results",
-    //   description: "A*A*A",
-    //   image: "/alevel.jpg",
-    // },
-    // { 
-    //   id: 4, 
-    //   title: "GCSE Results", 
-    //   description: "Grades 7-9", 
-    //   image: "/gcse.jpg" 
-    // },
-  ]
+  // const cards = [
+  //   { 
+  //     id: 1, 
+  //     title: "University of Cambridge", 
+  //     description: "Second-Class Honours", 
+  //     image: "/images/UoC Degree Certificate.jpg" 
+  //   },
+  //   { 
+  //     id: 2, 
+  //     title: "University of Leicester", 
+  //     description: "First Class Honours", 
+  //     image: "/images/First Class Honours.PNG" 
+  //   },
+  // {
+  //   id: 3,
+  //   title: "A-Level Results",
+  //   description: "A*A*A",
+  //   image: "/alevel.jpg",
+  // },
+  // { 
+  //   id: 4, 
+  //   title: "GCSE Results", 
+  //   description: "Grades 7-9", 
+  //   image: "/gcse.jpg" 
+  // },
+  // ]
 
   const uniSuccessItems = [
     {
@@ -97,26 +97,28 @@ export default function Home() {
               <h1 className="text-4xl sm:text-6xl font-bold tracking-tight text-ocean dark:text-white">Ace Educate</h1>
             </div>
             <div className="inline-block">
-              <span className="inline-flex flex-col sm:flex-row items-center px-4 py-2 rounded-full border border-blue-200 bg-white/80 backdrop-blur-sm text-sm shadow-sm dark:text-midnight-grey dark:bg-white">
+              {/* <span className="inline-flex flex-col sm:flex-row items-center px-4 py-2 rounded-full border border-blue-200 bg-white/80 backdrop-blur-sm text-sm shadow-sm dark:text-midnight-grey dark:bg-white">
                 Top-tier tutors at unbeatable prices 
                 <Link href="/about" className="ml-2 text-blue-600 hover:underline dark:text-navy-200">
                   Here&apos;s our story →
                 </Link>
-              </span>
+              </span> */}
             </div>
             
             <h1 className="text-4xl sm:text-6xl font-bold tracking-tight text-gray-900 dark:text-white">
-              Online Tutoring for GCSEs and A-Levels
+              Find expert tutors for GCSEs and A-Levels
             </h1>
             
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto dark:text-gray-200">
-              Ace Educate is the ultimate online tutoring platform to prepare students for GCSEs and A-Levels.
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto dark:text-gray-200">
+              We match students with the best tutors and mentors across many subjects.
             </p>
-            <p className="text-base text-gray-600 max-w-2xl mx-auto dark:text-gray-200">
-              For students, parents and tutors, get started today!
+            <p className="text-base text-gray-600 max-w-3xl mx-auto dark:text-gray-200">
+              Whether you are a student or parent, get started today! Book your first discovery call for FREE.
             </p>
-            <SignUpButton />
-
+              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <SignUpButton />
+                <PricingButton />
+              </div>
             {/* Scroll Indicator */}
             <div className="mt-16 animate-bounce">
               <svg className="w-6 h-6 mx-auto text-blue-600 dark:text-yellow-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -125,8 +127,76 @@ export default function Home() {
             </div>
           </div>
 
+          {/* Tutor Call-to-Action Section */}
+          <section className="mt-32">
+            <div className="max-w-4xl mx-auto">
+              {/* Tutors Banner */}
+              <div className="">
+                <Image 
+                  src="/images/Tutors banner transparent.svg" 
+                  alt="Our Tutors" 
+                  width={800} 
+                  height={400} 
+                  className="w-full h-auto"
+                />
+              </div>
+
+              {/* Call-to-Action Text and Button */}
+              <div className="text-center">
+                <p className="text-lg text-gray-700 dark:text-gray-300 mb-6">
+                  Choose from one of the tutors above or find more. If you&apos;re still unsure, we will find the perfect tutor for you.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                  <Link 
+                    href="/find-tutor" 
+                    className="bg-ocean hover:bg-navy text-white font-semibold py-2 px-6 mt-8 rounded-lg transition-colors inline-block"
+                  >
+                    Find a tutor
+                  </Link>
+                </div>
+                
+              </div>
+            </div>
+          </section>
+
+          {/* Exam Boards Covered Section */}
+          <section className="mt-48">
+            <div className="max-w-4xl mx-auto">
+              <h2 className="text-3xl font-light mb-8 text-gray-900 dark:text-white">Exam boards covered</h2>
+              <div className="flex flex-col sm:flex-row items-center justify-between gap-8">
+                <div className="flex-1 flex items-center justify-center">
+                  <Image 
+                    src="/images/AQA_logo.svg" 
+                    alt="AQA" 
+                    width={200} 
+                    height={100} 
+                    className="h-32 w-auto max-w-full"
+                  />
+                </div>
+                <div className="flex-1 flex items-center justify-center">
+                  <Image 
+                    src="/images/Edexcel_logo.svg" 
+                    alt="Edexcel" 
+                    width={200} 
+                    height={100} 
+                    className="h-32 w-auto max-w-full"
+                  />
+                </div>
+                <div className="flex-1 flex items-center justify-center">
+                  <Image 
+                    src="/images/OCR_logo.svg" 
+                    alt="OCR" 
+                    width={200} 
+                    height={100} 
+                    className="h-32 w-auto max-w-full"
+                  />
+                </div>
+              </div>
+            </div>
+          </section>
+
           {/* Services Section */}
-          <section className="mt-32 scroll-mt-24" id="services">
+          <section className="mt-48 scroll-mt-24" id="services">
             <h2 className="text-3xl font-bold text-center mb-12 text-gray-900 dark:text-white">Our Services</h2>
             {/* <h4 className="text-l font-semibold mb-4 text-gray-900">We offer</h4> */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -160,29 +230,69 @@ export default function Home() {
             </div>
           </section>
 
+          {/* How It Works Section */}
+          <section className="mt-48">
+            <div className="max-w-6xl mx-auto">
+              <h2 className="text-3xl font-bold text-center mb-16 text-gray-900 dark:text-white">How It Works (3 Steps)</h2>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                {/* Step 1 */}
+                <div className="text-center">
+                  <div className="bg-blue-100 dark:bg-blue-900 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6">
+                    <svg className="w-10 h-10 text-blue-600 dark:text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                    </svg>
+                  </div>
+                  <h3 className="text-xl font-semibold mb-4 text-gray-900 dark:text-white">Step 1: Tell Us Your Needs</h3>
+                  <p className="text-gray-600 dark:text-gray-300">Choose subject + level</p>
+                </div>
+
+                {/* Step 2 */}
+                <div className="text-center">
+                  <div className="bg-green-100 dark:bg-green-900 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6">
+                    <svg className="w-10 h-10 text-green-600 dark:text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                    </svg>
+                  </div>
+                  <h3 className="text-xl font-semibold mb-4 text-gray-900 dark:text-white">Step 2: Get Matched With a Tutor</h3>
+                  <p className="text-gray-600 dark:text-gray-300">Either pick a tutor or leave it to us to find the perfect tutor for your needs</p>
+                </div>
+
+                {/* Step 3 */}
+                <div className="text-center">
+                  <div className="bg-purple-100 dark:bg-purple-900 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6">
+                    <svg className="w-10 h-10 text-purple-600 dark:text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                    </svg>
+                  </div>
+                  <h3 className="text-xl font-semibold mb-4 text-gray-900 dark:text-white">Step 3: Start Learning</h3>
+                  <p className="text-gray-600 dark:text-gray-300">First Lesson Free (Discovery Call)</p>
+                </div>
+              </div>
+            </div>
+          </section>
+
           {/* Lead Form */}
-          <section className="mt-32" id="enquiry-form">
-            {/* <h2 className="text-3xl font-bold text-center mb-12 text-gray-900 dark:text-white">Lead Form</h2> */}
+          <section className="mt-48" id="enquiry-form">
+            <h2 className="text-3xl font-bold text-center mb-12 text-gray-900 dark:text-white">Book a Lesson or a FREE Discovery Call today!</h2>
             <LeadForm />
           </section>
 
           {/* Problems with Current Tutoring */}
-          <section className="mt-32">
+          <section className="mt-48">
             <h2 className="text-3xl font-bold text-center mb-12 text-gray-900 dark:text-white">What&apos;s Currently Wrong with Tutoring?</h2>
             <div className="bg-white rounded-lg p-8 shadow-sm border border-blue-100 hover:border-blue-200 transition-all max-w-3xl mx-auto">
               <ul className="space-y-4">
-                <li className="flex items-start gap-3">
-                  <FaTimes className="text-red-500 mt-1" />
-                  <span className="text-gray-600">Main focus is on grades and not future outlook</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <FaTimes className="text-red-500 mt-1" />
-                  <span className="text-gray-600">No career paths explored or designed</span>
-                </li>
+
                 <li className="flex items-start gap-3">
                   <FaTimes className="text-red-500 mt-1" />
                   <span className="text-gray-600">Expensive</span>
                 </li>
+
+                <li className="flex items-start gap-3">
+                  <FaTimes className="text-red-500 mt-1" />
+                  <span className="text-gray-600">No career paths explored or designed</span>
+                </li>
+
                 <li className="flex items-start gap-3">
                   <FaTimes className="text-red-500 mt-1" />
                   <span className="text-gray-600">Unrelatable tutors</span>
@@ -192,30 +302,28 @@ export default function Home() {
           </section>
 
           {/* Why Choose Us */}
-          <section className="mt-32">
+          <section className="mt-48">
             <h2 className="text-3xl font-bold text-center mb-12 text-gray-900 dark:text-white">Why Choose Us?</h2>
             <div className="bg-white rounded-lg p-8 shadow-sm border border-blue-100 hover:border-blue-200 transition-all max-w-3xl mx-auto">
               <ul className="space-y-4">
                 <li className="flex items-start gap-3">
+                  <FaCheck className="text-green-500 mt-1" />
+                  <span className="text-gray-600">Affordable yet fair for both students and tutors</span>
+                </li>
+
+                <li className="flex items-start gap-3">
                   <FaCheck className="text-green-500 text-4xl sm:text-xl md:text-2xl mt-1" />
-                  <span className="text-gray-600">Our team is comprised of young professionals who have experienced the recent school system that students are currently going through</span>
+                  <span className="text-gray-600">Our team is comprised of young professionals in their early 20s, who have recently experienced the school system that students are currently going through</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <FaCheck className="text-green-500 mt-1" />
-                  <span className="text-gray-600">Our knowledge about life after school is current</span>
+                  <span className="text-gray-600">Many of our tutors also have mentoring experience and can help you get into top universities</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <FaCheck className="text-green-500 mt-1" />
-                  <span className="text-gray-600">Our tutors know how to get into the best companies</span>
+                  <span className="text-gray-600">Our tutors know how to be successful in job applications for the best companies</span>
                 </li>
-                <li className="flex items-start gap-3">
-                  <FaCheck className="text-green-500 mt-1" />
-                  <span className="text-gray-600">We can help you get started on your entrepreneurial journey (if interested)</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <FaCheck className="text-green-500 mt-1" />
-                  <span className="text-gray-600">Fair price for both students and tutors</span>
-                </li>
+
                 <li className="flex items-start gap-3">
                   <FaCheck className="text-green-500 mt-1" />
                   <span className="text-gray-600">We offer more than just a tutor, you will get a friend and a role model</span>
@@ -225,7 +333,7 @@ export default function Home() {
           </section>
 
           {/* Proof Section */}
-          <section className="mt-32">
+          <section className="mt-48">
             <h2 className="text-3xl font-bold text-center mb-12 text-gray-900 dark:text-white">Our Proof of Success</h2>
             <div className="grid grid-cols-1 gap-8 max-w-3xl mx-auto">
               <div className="bg-white rounded-lg p-6 shadow-sm border border-blue-100 hover:border-blue-200 transition-all">
@@ -233,12 +341,12 @@ export default function Home() {
                 <SuccessCollage items={uniSuccessItems} />
               </div>
               
-              <div className="bg-white rounded-lg p-6 shadow-sm border border-blue-100 hover:border-blue-200 transition-all">
+              {/* <div className="bg-white rounded-lg p-6 shadow-sm border border-blue-100 hover:border-blue-200 transition-all">
                 <h3 className="text-xl font-semibold mb-4 text-gray-900">Academic Achievements</h3>
                 <div className="space-y-4">
                   <SlidingCards items={cards} />
                 </div>
-              </div>
+              </div> */}
 
               <div className="bg-white rounded-lg p-6 shadow-sm border border-blue-100 hover:border-blue-200 transition-all">
                 <h3 className="text-xl font-semibold mb-4 text-gray-900">Professional Success</h3>
@@ -248,7 +356,7 @@ export default function Home() {
           </section>
 
           {/* Pricing Section */}
-          <section className="mt-32 scroll-mt-24" id="pricing">
+          <section className="mt-48 scroll-mt-24" id="pricing">
             <h2 className="text-3xl font-bold text-center mb-10 text-gray-900 dark:text-white">Pricing</h2>
             
             
@@ -289,7 +397,7 @@ export default function Home() {
                 </div>
                 
                 <a href="#enquiry-form" className="w-full mt-8 bg-white text-gray-900 border-2 border-gray-200 group-hover:border-blue-500 font-semibold py-3 px-6 rounded-lg transition-all inline-block text-center self-end">
-                    Sign up
+                    Book a Lesson
                 </a>
                 </div>
 
@@ -322,7 +430,7 @@ export default function Home() {
                   </ul>
                 </div>
                 <a href="#enquiry-form" className="w-full mt-8 bg-white text-gray-900 border-2 border-gray-200 group-hover:border-blue-500 font-semibold py-3 px-6 rounded-lg transition-all inline-block text-center">
-                    Sign up
+                    Book a Lesson
                   </a>
               </div>
 
@@ -355,7 +463,7 @@ export default function Home() {
                   </ul>
                 </div>
                 <a href="#enquiry-form" className="w-full mt-8 bg-white text-gray-900 border-2 border-gray-200 group-hover:border-blue-500 font-semibold py-3 px-6 rounded-lg transition-all inline-block text-center self-end">
-                  Sign up
+                  Book a Lesson
                 </a>
               </div>
 
@@ -365,25 +473,26 @@ export default function Home() {
           </section>
 
           {/* Waitlist Section */}
-          <section className="mt-32" id="waitlist">
+          <section className="mt-48" id="waitlist">
             <WaitlistCard />
           </section>
 
           {/* FAQ Section */}
-          <section className="mt-32">
+          <section className="mt-48">
             <h2 className="text-3xl font-bold text-center mb-12 text-gray-900 dark:text-white">Common Questions</h2>
             <div className="max-w-3xl mx-auto space-y-4">
               <div className="bg-white rounded-lg p-6 shadow-sm border border-blue-100 hover:border-blue-200 transition-all">
                 <h3 className="text-xl font-semibold mb-2 text-gray-900">How do I get started?</h3>
-                <p className="text-gray-600">Simply sign up for our waitlist and we&apos;ll contact you to schedule your first session.</p>
+                <p className="text-gray-600">First, use the <Link href="/find-tutor" className="text-blue-600 hover:text-blue-800 underline">Find a tutor</Link> page to pick a tutor you like. Then, you can book a lesson or a FREE discovery call <a href="#enquiry-form" className="text-blue-600 hover:text-blue-800 underline">here</a>. Make sure to mention the name of the tutor you are interested in.</p>
+                
               </div>
               <div className="bg-white rounded-lg p-6 shadow-sm border border-blue-100 hover:border-blue-200 transition-all">
-                <h3 className="text-xl font-semibold mb-2 text-gray-900">What subjects do you cover?</h3>
-                <p className="text-gray-600">We cover all major GCSE and A-Level subjects, with a focus on STEM subjects.</p>
+                <h3 className="text-xl font-semibold mb-2 text-gray-900">What subjects and exam boards do you cover?</h3>
+                <p className="text-gray-600">We cover all major GCSE and A-Level subjects, including AQA, Edexcel and OCR exam boards</p>
               </div>
               <div className="bg-white rounded-lg p-6 shadow-sm border border-blue-100 hover:border-blue-200 transition-all">
-                <h3 className="text-xl font-semibold mb-2 text-gray-900">Can I change my subscription plan?</h3>
-                <p className="text-gray-600">Yes, you can upgrade or downgrade your plan at any time.</p>
+                <h3 className="text-xl font-semibold mb-2 text-gray-900">Can I cancel the lessons or the tutoring agreement at any time?</h3>
+                <p className="text-gray-600">Yes, you can cancel the tutoring agreement at any time. If you want to cancel a particular lesson, you can do so by contacting us 24 hours in advance.</p>
               </div>
             </div>
           </section>
