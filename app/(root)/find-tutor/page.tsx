@@ -1,6 +1,5 @@
-import Image from "next/image";
 import Link from "next/link";
-import { FaPhone } from "react-icons/fa";
+import Image from "next/image";
 import TutorListings from "@/components/TutorListings";
 
 export default function FindTutor() {
@@ -168,13 +167,13 @@ export default function FindTutor() {
             <div className="bg-gray-50 dark:bg-gray-800 rounded-lg p-6 sticky top-8">
               <div className="text-center">
                 <div className="w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <img src="/logo.svg" alt="ACE Educate" className="w-16 h-16" />
+                  <Image src="/logo.svg" alt="ACE Educate" width={64} height={64} className="w-16 h-16" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">
                   Looking for something specific?
                 </h3>
                 <p className="text-gray-600 dark:text-gray-300 mb-6">
-                  Let us know what you're looking for and our tutor matching team will help you find the perfect fit.
+                  Let us know what you&apos;re looking for and our tutor matching team will help you find the perfect fit.
                 </p>
                 <Link href="/#enquiry-form" className="w-full bg-ocean hover:bg-navy text-white font-semibold py-3 px-6 rounded-lg transition-colors mb-4 inline-block text-center">
                   Find me a tutor

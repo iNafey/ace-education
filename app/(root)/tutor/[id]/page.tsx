@@ -1,6 +1,6 @@
-import Image from "next/image";
 import Link from "next/link";
-import { FaStar, FaArrowLeft } from "react-icons/fa";
+import Image from "next/image";
+import { FaArrowLeft } from "react-icons/fa";
 
 // Tutor data - in a real app, this would come from a database
 const tutors = [
@@ -278,7 +278,7 @@ export default async function TutorProfile({ params }: { params: Promise<{ id: s
                 {/* Profile Image */}
                 <div className="flex-shrink-0">
                   {tutor.image ? (
-                    <img src={tutor.image} alt={tutor.name} className="w-40 h-40 rounded-lg" />
+                    <Image src={tutor.image} alt={tutor.name} width={160} height={160} className="w-40 h-40 rounded-lg" />
                   ) : (
                     <div className="w-40 h-40 bg-gray-200 dark:bg-gray-600 rounded-lg flex items-center justify-center">
                       <span className="text-3xl font-bold text-gray-500 dark:text-gray-300">
@@ -325,7 +325,7 @@ export default async function TutorProfile({ params }: { params: Promise<{ id: s
                 {/* Profile Image */}
                 <div className="px-4 pt-4">
                   {tutor.image ? (
-                    <img src={tutor.image} alt={tutor.name} className="w-full aspect-square rounded-lg object-cover" />
+                    <Image src={tutor.image} alt={tutor.name} width={400} height={400} className="w-full aspect-square rounded-lg object-cover" />
                   ) : (
                     <div className="w-full aspect-square bg-gray-200 dark:bg-gray-600 rounded-lg flex items-center justify-center">
                       <span className="text-4xl font-bold text-gray-500 dark:text-gray-300">
@@ -545,7 +545,7 @@ export default async function TutorProfile({ params }: { params: Promise<{ id: s
                   Get in touch
                 </Link>
                 <p className="text-sm text-gray-600 dark:text-gray-400 mt-4">
-                  We'll connect you with {tutor.name} for a free consultation.
+                  We&apos;ll connect you with {tutor.name} for a free consultation.
                 </p>
               </div>
             </div>

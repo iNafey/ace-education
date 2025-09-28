@@ -1,5 +1,5 @@
-import { FaStar } from "react-icons/fa";
 import Link from "next/link";
+import Image from "next/image";
 
 interface TutorCardProps {
   tutor: {
@@ -28,7 +28,7 @@ export default function TutorCard({ tutor }: TutorCardProps) {
           {/* Profile Image */}
           <div className="flex-shrink-0">
             {tutor.image ? (
-              <img src={tutor.image} alt={tutor.name} className="w-48 h-48 rounded-lg object-cover" />
+              <Image src={tutor.image} alt={tutor.name} width={192} height={192} className="w-48 h-48 rounded-lg object-cover" />
             ) : (
               <div className="w-48 h-48 bg-gray-200 dark:bg-gray-600 rounded-lg flex items-center justify-center">
                 <span className="text-4xl font-bold text-gray-500 dark:text-gray-300">
@@ -77,7 +77,7 @@ export default function TutorCard({ tutor }: TutorCardProps) {
           {/* Profile Image */}
           <div className="px-4 pt-4">
             {tutor.image ? (
-              <img src={tutor.image} alt={tutor.name} className="w-full aspect-square rounded-lg object-cover" />
+              <Image src={tutor.image} alt={tutor.name} width={400} height={400} className="w-full aspect-square rounded-lg object-cover" />
             ) : (
               <div className="w-full aspect-square bg-gray-200 dark:bg-gray-600 rounded-lg flex items-center justify-center">
                 <span className="text-4xl font-bold text-gray-500 dark:text-gray-300">
