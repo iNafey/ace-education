@@ -105,7 +105,7 @@ export default function WaitlistCard() {
                 Sign Up
             </button>
             </form> */}
-            <p className="text-gray-500 mb-6">Our platform is under works but you can still sign up for early access and we&apos;ll let you know when it&apos;s ready.</p>
+            <p className="text-gray-500 text-center mb-6">Our virtual platform is under works but you can still sign up for early access and we&apos;ll let you know when it&apos;s ready. This doesn&apos;t affect your lessons.</p>
             <Form {...form}>
                 <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
                     <FormField

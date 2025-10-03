@@ -102,7 +102,7 @@ const tutors = [
     image: "/images/Darshan Profile New.jpg",
     about: "I am a fifth-year student, currently studying Medicine at uni, I offer lessons for Biology, Chemistry and Physics at A-Level and GCSE. I can also help with Medicine applications for top UK universities as well as UCAT preparation.",
     qualifications: [
-      { subject: "Chemistry", qualification: "A-Level", grade: "A*" },
+      { subject: "Chemistry", qualification: "A-Level", grade: "A" },
       { subject: "Biology", qualification: "A-Level", grade: "A" },
       { subject: "Maths", qualification: "A-Level", grade: "A" },
       { subject: "Medicine", qualification: "Degree (Bachelors)", grade: "Currently Studying" }

@@ -18,7 +18,7 @@ export default function About() {
           <div className="bg-white rounded-lg p-8 shadow-sm border border-blue-100 mb-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">The Beginning</h2>
             <p className="text-gray-600 mb-6">
-              Ace Educate was founded by two graduates who excelled in their academic careers and secured positions at prestigious companies. We noticed a significant gap in the current tutoring landscape - while there were many tutors focusing solely on academic achievement, few were equipped to guide students toward their future careers.
+              Ace Educate was founded by two graduates who excelled in academia and have a passion for helping others. We noticed a significant gap in the current tutoring landscape - while there were many tutors focusing solely on academic achievement, few were equipped to guide students toward their future careers.
             </p>
             <p className="text-gray-600">
               Our journey began when we started mentoring younger students, sharing not just our academic knowledge, but also our recent experiences with university applications, internships, and job hunting. The impact we had on these students&apos; lives inspired us to create something bigger.
@@ -34,8 +34,8 @@ export default function About() {
               <div>
                 <h3 className="text-xl font-semibold text-gray-900">Academic Excellence</h3>
                 <p className="text-gray-600">
-                  Our founders served as teaching assistants at their respective universities, understanding the need for personalized guidance in education from the bottom-up.
-                  Thus, all of our tutors achieved top grades in GCSEs and A-Levels, followed by top-notch degrees from leading universities.
+                  Our founders served as teaching assistants at their respective universities, understanding the need for personalised guidance in education from the bottom-up.
+                  All our tutors have achieved top grades in GCSEs and A-Levels, followed by top-notch degrees from leading universities.
                 </p>
               </div>
             </div>
@@ -81,13 +81,13 @@ export default function About() {
           <div className="text-center bg-white rounded-lg p-8 shadow-sm border border-blue-100">
             <h2 className="text-2xl font-bold text-gray-900 mb-4">Join Our Journey</h2>
             <p className="text-gray-600 mb-8">
-              Whether you&apos;re preparing for GCSEs, A-Levels, or planning your future career, we&apos;re here to help you succeed.
+              Whether you&apos;re preparing for GCSEs, A-Levels, or planning your future career, we&apos;re here to help you succeed. Get started today!
             </p>
             <Link 
-              href="/#waitlist"
+              href="/#enquiry-form"
               className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-lg text-white bg-pastel-blue hover:bg-pastel-blue/90 hover:scale-105 hover:shadow-lg transition-all duration-200"
             >
-              Join the Waitlist
+              Book a Lesson
             </Link>
           </div>
         </div>
