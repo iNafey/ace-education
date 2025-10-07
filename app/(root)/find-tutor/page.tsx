@@ -120,7 +120,7 @@ export default function FindTutor() {
       isNew: true,
       isTutor: true,
       subjects: ["Mathematics", "Physics", "Chemistry", "Biology"],
-      image: "",
+      image: "/images/Parth Profile New.jpg",
       subjectsOffered: [
         { subject: "Mathematics", level: "GCSE", price: "£25/hr" },
         { subject: "Physics", level: "GCSE", price: "£25/hr" },
@@ -129,6 +129,27 @@ export default function FindTutor() {
         { subject: "Mathematics", level: "A-Level", price: "£30/hr" },
         { subject: "Physics", level: "A-Level", price: "£30/hr" },
         { subject: "Chemistry", level: "A-Level", price: "£30/hr" },
+        { subject: "Biology", level: "A-Level", price: "£30/hr" }
+      ]
+    },
+    {
+      id: 7,
+      name: "Maya S.",
+      university: "University of Manchester - Midwifery",
+      bio: "Hi! I'm Maya, I specialize in English Literature and Biology at GCSE and A-Level, and midwifery/nursing applications too! As a student, I understand the academic challenges students face and use various study techniques that helped me till today. I'm passionate about helping students achieve grades they thought impossible!",
+      tutoringStartingPrice: "£25",
+      rating: 4.8,
+      reviews: 8,
+      lessons: 32,
+      isNew: true,
+      isTutor: true,
+      canMentor: true,
+      subjects: ["English Literature", "Biology"],
+      image: "/images/Maya Profile New.jpg",
+      subjectsOffered: [
+        { subject: "English Literature", level: "GCSE", price: "£25/hr" },
+        { subject: "Biology", level: "GCSE", price: "£25/hr" },
+        { subject: "English Literature", level: "A-Level", price: "£30/hr" },
         { subject: "Biology", level: "A-Level", price: "£30/hr" }
       ]
     }

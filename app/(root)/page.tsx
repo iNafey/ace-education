@@ -6,6 +6,7 @@ import WaitlistCard from "@/components/WaitlistCard";
 import SuccessCollage from "@/components/SuccessCollage";
 import LeadForm from "@/components/LeadForm";
 import PricingButton from "@/components/PricingButton";
+import AnimatedCard from "@/components/AnimatedCard";
 
 export default function Home() {
   // const cards = [
@@ -84,7 +85,7 @@ export default function Home() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-100 via-blue-50 to-blue-200 dark:bg-gradient-to-b dark:from-[#1e2129] dark:via-slate" >
+    <div className="min-h-screen bg-gradient-to-br from-blue-100 via-blue-50 to-blue-200 dark:bg-gradient-to-b dark:from-[#1e2129] dark:via-slate">
       {/* Navbar */}
       
 
@@ -248,41 +249,48 @@ export default function Home() {
           <section className="mt-48 scroll-mt-24" id="services">
             <h2 className="text-3xl font-bold text-center mb-12 text-gray-900 dark:text-white">Our Services</h2>
             {/* <h4 className="text-l font-semibold mb-4 text-gray-900">We offer</h4> */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="bg-white rounded-lg p-6 shadow-sm border border-blue-100 hover:border-blue-200 transition-all">
-                <h3 className="text-xl font-semibold mb-4 text-gray-900">Subjects</h3>
-                <p className="text-gray-600">Comprehensive tutoring in all major STEM subjects for GCSEs and A-Levels: Biology, Business Studies, 
-                  Chemistry, Computer Science, Economics, English, Geography, Maths, and Physics.</p>
-                
-                
-                {/* <ul className="list-disc list-inside space-y-2 mt-5 text-gray-600">
-                  <li>Biology</li>
-                  <li>Business Studies</li>
-                  <li>Chemistry</li>
-                  <li>Computer Science</li>
-                  <li>Economics</li>
-                  <li>English</li>
-                  <li>Geography</li>
-                  <li>Maths</li>
-                  <li>Physics</li>
-                </ul> */}
-                
-              </div>
-              <div className="bg-white rounded-lg p-6 shadow-sm border border-blue-100 hover:border-blue-200 transition-all">
-                <h3 className="text-xl font-semibold mb-4 text-gray-900">Flexible Lessons</h3>
-                <p className="text-gray-600">Schedule sessions at your convenience. We offer lessons anytime during the academic year, although earlier is best for results!</p>
-              </div>
-              <div className="bg-white rounded-lg p-6 shadow-sm border border-blue-100 hover:border-blue-200 transition-all">
-                <h3 className="text-xl font-semibold mb-4 text-gray-900">Academic & Career Mentorship</h3>
-                <p className="text-gray-600">Expert guidance on A-level and university applications. As well as helping you navigate career paths and opportunities.</p>
-              </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:items-stretch">
+              <AnimatedCard delay={0}>
+                <div className="bg-white rounded-lg p-6 shadow-sm border border-blue-100 hover:border-blue-200 transition-all h-full flex flex-col">
+                  <h3 className="text-xl font-semibold mb-4 text-gray-900">Subjects</h3>
+                  <p className="text-gray-600 flex-grow">Comprehensive tutoring in all major STEM subjects for GCSEs and A-Levels: Biology, Business Studies, 
+                    Chemistry, Computer Science, Economics, English, Geography, Maths, and Physics.</p>
+                  
+                  
+                  {/* <ul className="list-disc list-inside space-y-2 mt-5 text-gray-600">
+                    <li>Biology</li>
+                    <li>Business Studies</li>
+                    <li>Chemistry</li>
+                    <li>Computer Science</li>
+                    <li>Economics</li>
+                    <li>English</li>
+                    <li>Geography</li>
+                    <li>Maths</li>
+                    <li>Physics</li>
+                  </ul> */}
+                  
+                </div>
+              </AnimatedCard>
+              <AnimatedCard delay={150}>
+                <div className="bg-white rounded-lg p-6 shadow-sm border border-blue-100 hover:border-blue-200 transition-all h-full flex flex-col">
+                  <h3 className="text-xl font-semibold mb-4 text-gray-900">Flexible Lessons</h3>
+                  <p className="text-gray-600 flex-grow">Schedule sessions at your convenience. We offer lessons anytime during the academic year, although earlier is best for results!</p>
+                </div>
+              </AnimatedCard>
+              <AnimatedCard delay={300}>
+                <div className="bg-white rounded-lg p-6 shadow-sm border border-blue-100 hover:border-blue-200 transition-all h-full flex flex-col">
+                  <h3 className="text-xl font-semibold mb-4 text-gray-900">Academic & Career Mentorship</h3>
+                  <p className="text-gray-600 flex-grow">Expert guidance on A-level and university applications. As well as helping you navigate career paths and opportunities.</p>
+                </div>
+              </AnimatedCard>
             </div>
           </section>
 
           {/* Problems with Current Tutoring */}
           <section className="mt-48">
             <h2 className="text-3xl font-bold text-center mb-12 text-gray-900 dark:text-white">What&apos;s Currently Wrong with Tutoring?</h2>
-            <div className="bg-white rounded-lg p-8 shadow-sm border border-red-100 hover:border-red-200 transition-all max-w-3xl mx-auto">
+            <AnimatedCard delay={0}>
+              <div className="bg-white rounded-lg p-8 shadow-sm border border-red-100 hover:border-red-200 transition-all max-w-3xl mx-auto">
               <ul className="space-y-4">
                 <li className="flex items-start gap-3">
                   <FaTimes className="text-red-500 mt-1" />
@@ -305,13 +313,15 @@ export default function Home() {
                   <span className="text-gray-600">No degree apprenticeship application support</span>
                 </li>
               </ul>
-            </div>
+              </div>
+            </AnimatedCard>
           </section>
 
           {/* Why Choose Us */}
           <section className="mt-48">
             <h2 className="text-3xl font-bold text-center mb-12 text-gray-900 dark:text-white">Why Choose Us?</h2>
-            <div className="bg-white rounded-lg p-8 shadow-sm border border-green-100 hover:border-green-200 transition-all max-w-3xl mx-auto">
+            <AnimatedCard delay={0}>
+              <div className="bg-white rounded-lg p-8 shadow-sm border border-green-100 hover:border-green-200 transition-all max-w-3xl mx-auto">
               <ul className="space-y-4">
                 <li className="flex items-start gap-3">
                   <FaCheck className="text-green-500 mt-1" />
@@ -334,10 +344,63 @@ export default function Home() {
                   <span className="text-gray-600">We offer more than just a tutor, you will get a friend and a role model</span>
                 </li>
               </ul>
-            </div>
+              </div>
+            </AnimatedCard>
           </section>
 
-          
+          {/* Testimonials Section */}
+          <section className="mt-48">
+            <h2 className="text-3xl font-bold text-center mb-12 text-gray-900 dark:text-white">What Our Students & Parents Say</h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto md:items-stretch">
+              {/* Testimonial 1 */}
+              <AnimatedCard delay={0}>
+                <div className="bg-white rounded-lg p-6 shadow-sm border border-blue-100 hover:border-blue-200 transition-all h-full flex flex-col">
+                <div className="flex items-center mb-4">
+                  <div className="w-12 h-12 bg-gray-200 dark:bg-gray-600 rounded-full flex items-center justify-center mr-4">
+                    <span className="text-gray-500 dark:text-gray-300 font-semibold text-lg">A</span>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-900 dark:text-white">Alka B.</h4>
+                    <p className="text-sm text-gray-600 dark:text-gray-400">English Language & Literature • GCSE</p>
+                  </div>
+                </div>
+                <p className="text-gray-700 dark:text-gray-300 italic flex-grow">&ldquo;We recently joined Ace Educate, and my son has really enjoyed the one-to-one tutoring. The lessons are well structured, and the tutors provide detailed feedback on each session as well as his overall progress. It&apos;s a great service that keeps both parents and children informed and involved every step of the way.&rdquo;</p>
+                </div>
+              </AnimatedCard>
+
+              {/* Testimonial 2 */}
+              <AnimatedCard delay={150}>
+                <div className="bg-white rounded-lg p-6 shadow-sm border border-blue-100 hover:border-blue-200 transition-all h-full flex flex-col">
+                <div className="flex items-center mb-4">
+                  <div className="w-12 h-12 bg-gray-200 dark:bg-gray-600 rounded-full flex items-center justify-center mr-4">
+                    <span className="text-gray-500 dark:text-gray-300 font-semibold text-lg">S</span>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-900 dark:text-white">James D.</h4>
+                    <p className="text-sm text-gray-600 dark:text-gray-400">Economics • A-level</p>
+                  </div>
+                </div>
+                <p className="text-gray-700 dark:text-gray-300 italic flex-grow">&ldquo;It was excellent working with Uday he was insist on having a plan on whatever we did which was great to give me direction and the focus on exam technique was crucial for getting the A* that I ended up with&rdquo;</p>
+                </div>
+              </AnimatedCard>
+
+              {/* Testimonial 3 */}
+              <AnimatedCard delay={300}>
+                <div className="bg-white rounded-lg p-6 shadow-sm border border-blue-100 hover:border-blue-200 transition-all h-full flex flex-col">
+                <div className="flex items-center mb-4">
+                  <div className="w-12 h-12 bg-gray-200 dark:bg-gray-600 rounded-full flex items-center justify-center mr-4">
+                    <span className="text-gray-500 dark:text-gray-300 font-semibold text-lg">J</span>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-900 dark:text-white">Ayyan P.</h4>
+                    <p className="text-sm text-gray-600 dark:text-gray-400">Double Science • GCSE</p>
+                  </div>
+                </div>
+                <p className="text-gray-700 dark:text-gray-300 italic flex-grow">&ldquo;The tutoring really helped me understand topics I was struggling with. My tutor explained everything clearly and made the lessons engaging. Definitely feel much more confident going into my exams now.&rdquo;</p>
+                </div>
+              </AnimatedCard>
+            </div>
+          </section>
 
           {/* Pricing Section */}
           <section className="mt-48 scroll-mt-24" id="pricing">
@@ -361,11 +424,12 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-7xl mx-auto px-4">
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-7xl mx-auto px-4 lg:items-stretch">
 
 
               {/* GCSE Tutoring Tier */}
-              <div className="group bg-white rounded-2xl p-8 shadow-sm border-2 border-gray-200 hover:border-blue-500 hover:shadow-lg focus-within:border-blue-500 focus-within:shadow-lg transition-all cursor-pointer flex flex-col">
+              <AnimatedCard delay={0}>
+                <div className="group bg-white rounded-2xl p-8 shadow-sm border-2 border-gray-200 hover:border-blue-500 hover:shadow-lg focus-within:border-blue-500 focus-within:shadow-lg transition-all cursor-pointer flex flex-col h-full">
                 <div className="space-y-4 flex-grow">
                   <div className="flex items-center gap-2">
                     <h3 className="text-xl font-semibold text-gray-900">GCSE Tutoring</h3>
@@ -409,9 +473,11 @@ export default function Home() {
                     Book a Lesson
                 </a>
                 </div>
+              </AnimatedCard>
 
               {/* A-Level Tutoring Tier */}
-              <div className="group bg-white rounded-2xl p-8 shadow-sm border-2 border-gray-200 hover:border-blue-500 hover:shadow-lg focus-within:border-blue-500 focus-within:shadow-lg transition-all cursor-pointer flex flex-col">
+              <AnimatedCard delay={150}>
+                <div className="group bg-white rounded-2xl p-8 shadow-sm border-2 border-gray-200 hover:border-blue-500 hover:shadow-lg focus-within:border-blue-500 focus-within:shadow-lg transition-all cursor-pointer flex flex-col h-full">
                 <div className="space-y-4 flex-grow">
                   <div className="flex items-center gap-2">
                     <h3 className="text-xl font-semibold text-gray-900">A-Level Tutoring</h3>
@@ -451,10 +517,12 @@ export default function Home() {
                 <a href="#enquiry-form" className="w-full mt-8 bg-white text-gray-900 border-2 border-gray-200 group-hover:border-blue-500 font-semibold py-3 px-6 rounded-lg transition-all inline-block text-center">
                     Book a Lesson
                   </a>
-              </div>
+                </div>
+              </AnimatedCard>
 
               {/* Mentoring Tier */}
-              <div className="group bg-white rounded-2xl p-8 shadow-lg border-2 border-gray-200 hover:border-blue-500 hover:shadow-xl focus-within:shadow-xl transition-all cursor-pointer flex flex-col">
+              <AnimatedCard delay={300}>
+                <div className="group bg-white rounded-2xl p-8 shadow-lg border-2 border-gray-200 hover:border-blue-500 hover:shadow-xl focus-within:shadow-xl transition-all cursor-pointer flex flex-col h-full">
                 <div className="space-y-4 flex-grow">
                   <h3 className="text-xl font-semibold text-gray-900">Mentoring</h3>
                   <p className="text-gray-500">Perfect for career and academic guidance</p>
@@ -484,7 +552,8 @@ export default function Home() {
                 <a href="#enquiry-form" className="w-full mt-8 bg-white text-gray-900 border-2 border-gray-200 group-hover:border-blue-500 font-semibold py-3 px-6 rounded-lg transition-all inline-block text-center self-end">
                   Book a Lesson
                 </a>
-              </div>
+                </div>
+              </AnimatedCard>
 
                 
 
@@ -503,10 +572,12 @@ export default function Home() {
           <section className="mt-48">
             <h2 className="text-3xl font-bold text-center mb-12 text-gray-900 dark:text-white">Our Proof of Success</h2>
             <div className="grid grid-cols-1 gap-8 max-w-3xl mx-auto">
-              <div className="bg-white rounded-lg p-6 shadow-sm border border-blue-100 hover:border-blue-200 transition-all">
-                <h3 className="text-xl font-semibold mb-4 text-gray-900">Successful University Admissions</h3>
-                <SuccessCollage items={uniSuccessItems} />
-              </div>
+              <AnimatedCard delay={0}>
+                <div className="bg-white rounded-lg p-6 shadow-sm border border-blue-100 hover:border-blue-200 transition-all">
+                  <h3 className="text-xl font-semibold mb-4 text-gray-900">Successful University Admissions</h3>
+                  <SuccessCollage items={uniSuccessItems} />
+                </div>
+              </AnimatedCard>
               
               {/* <div className="bg-white rounded-lg p-6 shadow-sm border border-blue-100 hover:border-blue-200 transition-all">
                 <h3 className="text-xl font-semibold mb-4 text-gray-900">Academic Achievements</h3>
@@ -515,10 +586,12 @@ export default function Home() {
                 </div>
               </div> */}
 
-              <div className="bg-white rounded-lg p-6 shadow-sm border border-blue-100 hover:border-blue-200 transition-all">
-                <h3 className="text-xl font-semibold mb-4 text-gray-900">Professional Success</h3>
-                <SuccessCollage items={professionalSuccessItems} />
-              </div>
+              <AnimatedCard delay={150}>
+                <div className="bg-white rounded-lg p-6 shadow-sm border border-blue-100 hover:border-blue-200 transition-all">
+                  <h3 className="text-xl font-semibold mb-4 text-gray-900">Professional Success</h3>
+                  <SuccessCollage items={professionalSuccessItems} />
+                </div>
+              </AnimatedCard>
             </div>
           </section>
 
@@ -533,19 +606,25 @@ export default function Home() {
           <section className="mt-48">
             <h2 className="text-3xl font-bold text-center mb-12 text-gray-900 dark:text-white">Common Questions</h2>
             <div className="max-w-3xl mx-auto space-y-4">
-              <div className="bg-white rounded-lg p-6 shadow-sm border border-blue-100 hover:border-blue-200 transition-all">
-                <h3 className="text-xl font-semibold mb-2 text-gray-900">How do I get started?</h3>
-                <p className="text-gray-600">First, use the <Link href="/find-tutor" className="text-blue-600 hover:text-blue-800 underline">Find a tutor</Link> page to pick a tutor you like. Then, you can book a lesson or a FREE discovery call <a href="#enquiry-form" className="text-blue-600 hover:text-blue-800 underline">here</a>. Make sure to mention the name of the tutor you are interested in.</p>
-                
-              </div>
-              <div className="bg-white rounded-lg p-6 shadow-sm border border-blue-100 hover:border-blue-200 transition-all">
-                <h3 className="text-xl font-semibold mb-2 text-gray-900">What subjects and exam boards do you cover?</h3>
-                <p className="text-gray-600">We cover all major GCSE and A-Level subjects, including AQA, Edexcel and OCR exam boards.</p>
-              </div>
-              <div className="bg-white rounded-lg p-6 shadow-sm border border-blue-100 hover:border-blue-200 transition-all">
-                <h3 className="text-xl font-semibold mb-2 text-gray-900">Can I cancel the lessons or the tutoring agreement at any time?</h3>
-                <p className="text-gray-600">Yes, you can cancel the tutoring agreement at any time. If you want to cancel a particular lesson, you can do so by contacting us 24 hours in advance.</p>
-              </div>
+              <AnimatedCard delay={0}>
+                <div className="bg-white rounded-lg p-6 shadow-sm border border-blue-100 hover:border-blue-200 transition-all">
+                  <h3 className="text-xl font-semibold mb-2 text-gray-900">How do I get started?</h3>
+                  <p className="text-gray-600">First, use the <Link href="/find-tutor" className="text-blue-600 hover:text-blue-800 underline">Find a tutor</Link> page to pick a tutor you like. Then, you can book a lesson or a FREE discovery call <a href="#enquiry-form" className="text-blue-600 hover:text-blue-800 underline">here</a>. Make sure to mention the name of the tutor you are interested in.</p>
+                  
+                </div>
+              </AnimatedCard>
+              <AnimatedCard delay={150}>
+                <div className="bg-white rounded-lg p-6 shadow-sm border border-blue-100 hover:border-blue-200 transition-all">
+                  <h3 className="text-xl font-semibold mb-2 text-gray-900">What subjects and exam boards do you cover?</h3>
+                  <p className="text-gray-600">We cover all major GCSE and A-Level subjects, including AQA, Edexcel and OCR exam boards.</p>
+                </div>
+              </AnimatedCard>
+              <AnimatedCard delay={300}>
+                <div className="bg-white rounded-lg p-6 shadow-sm border border-blue-100 hover:border-blue-200 transition-all">
+                  <h3 className="text-xl font-semibold mb-2 text-gray-900">Can I cancel the lessons or the tutoring agreement at any time?</h3>
+                  <p className="text-gray-600">Yes, you can cancel the tutoring agreement at any time. If you want to cancel a particular lesson, you can do so by contacting us 24 hours in advance.</p>
+                </div>
+              </AnimatedCard>
             </div>
           </section>
 

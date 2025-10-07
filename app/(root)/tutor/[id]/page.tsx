@@ -198,7 +198,7 @@ const tutors = [
   },
   {
     id: 6,
-    name: "Parth",
+    name: "Parth S.",
     university: "University of Leicester - Physics",
     tutoringStartingPrice: "£25",
     mentoringPrice: "£30",
@@ -210,7 +210,7 @@ const tutors = [
     respondsQuickly: true,
     isTutor: true,
     subjects: ["Mathematics", "Physics", "Chemistry", "Biology"],
-    image: "",
+    image: "/images/Parth Profile New.jpg",
     about: "Enthusiastic about teaching others. Currently studying Physics at uni. I offer lessons for Maths, Physics, Chemistry and Biology at A-Level and GCSE.",
     qualifications: [
       { subject: "Physics", qualification: "Bachelor's Degree (Leicester)", grade: "Currently Studying" }
@@ -232,6 +232,44 @@ const tutors = [
       { subject: "Mathematics", level: "A-Level", price: "£30/hr" },
       { subject: "Physics", level: "A-Level", price: "£30/hr" },
       { subject: "Chemistry", level: "A-Level", price: "£30/hr" },
+      { subject: "Biology", level: "A-Level", price: "£30/hr" }
+    ]
+  },
+  {
+    id: 7,
+    name: "Maya S.",
+    university: "University of Manchester - Midwifery",
+    tutoringStartingPrice: "£25",
+    mentoringPrice: "£30",
+    rating: 4.8,
+    reviews: 8,
+    lessons: 32,
+    isNew: true,
+    isSuperTutor: false,
+    respondsQuickly: true,
+    isTutor: true,
+    canMentor: true,
+    subjects: ["English Literature", "Biology"],
+    image: "/images/Maya Profile New.jpg",
+    about: "Hi! I’m Maya, a current 2nd year midwifery student at the university of Manchester. Being a student, I feel like I have a greater understating of the academic needs of pupils and wish to help other students achieve the grades I thought to be impossible at that stage of my education. The subjects I enjoyed studying most during high school and college were English literature and biology which I'm still passionate about now. They are widely different subjects so I have a strong knowledge of various studying techniques that can allow me to develop skills which helped me to secure a place on my midwifery course. If you’re struggling with GCSE or A level English literature and biology or if you're looking to apply for a midwifery/nursing degree and need some tips for your interview or application then I look forward to helping you on your academic journey!",
+    qualifications: [
+      { subject: "English Literature", qualification: "A-Level", grade: "A" },
+      { subject: "Biology", qualification: "A-Level", grade: "A" },
+      { subject: "Midwifery", qualification: "Bachelor's Degree (Manchester)", grade: "Currently Studying" }
+    ],
+    availability: {
+      monday: { morning: true, afternoon: true, evening: true },
+      tuesday: { morning: true, afternoon: true, evening: true },
+      wednesday: { morning: true, afternoon: true, evening: true },
+      thursday: { morning: true, afternoon: true, evening: true },
+      friday: { morning: true, afternoon: true, evening: true },
+      saturday: { morning: true, afternoon: true, evening: true },
+      sunday: { morning: true, afternoon: true, evening: true }
+    },
+    subjectsOffered: [
+      { subject: "English Literature", level: "GCSE", price: "£25/hr" },
+      { subject: "Biology", level: "GCSE", price: "£25/hr" },
+      { subject: "English Literature", level: "A-Level", price: "£30/hr" },
       { subject: "Biology", level: "A-Level", price: "£30/hr" }
     ]
   }
