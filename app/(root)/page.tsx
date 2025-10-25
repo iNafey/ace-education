@@ -106,12 +106,12 @@ export default function Home() {
               </span> */}
             </div>
             
-            <h1 className="text-4xl sm:text-6xl font-bold tracking-tight text-gray-900 dark:text-white">
-              Find expert tutors for GCSEs and A-Levels
+            <h1 className="text-4xl sm:text-5xl font-bold tracking-tight text-gray-900 dark:text-white">
+              Find expert mentors for University Admissions & Tutoring
             </h1>
             
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto dark:text-gray-200">
-              We match students with the best tutors and mentors who are actually affordable!
+            <p className="text-xl text-gray-600 max-w-4xl mx-auto dark:text-gray-200">
+              We match students with the high-performing young mentors and tutors who are actually affordable!
             </p>
             <p className="text-base text-gray-600 max-w-3xl mx-auto dark:text-gray-200">
               First lesson is upto <a href="#pricing" className="font-bold text-yellow-600 bg-clip-text text-transparent">40% off</a>! So, whether you are a student or parent, get started today.
@@ -141,7 +141,7 @@ export default function Home() {
                     </svg>
                   </div>
                   <h3 className="text-xl font-semibold mb-4 text-gray-900 dark:text-white">Step 1: Decide Your Needs</h3>
-                  <p className="text-gray-600 dark:text-gray-300">Choose one or more subjects + level</p>
+                  <p className="text-gray-600 dark:text-gray-300">Keep in mind the subject(s) you want help with or if you want help in applying to university</p>
                 </div>
 
                 {/* Step 2 */}
@@ -151,8 +151,8 @@ export default function Home() {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
                     </svg>
                   </div>
-                  <h3 className="text-xl font-semibold mb-4 text-gray-900 dark:text-white">Step 2: Get Matched With a Tutor</h3>
-                  <p className="text-gray-600 dark:text-gray-300">Either pick a tutor or leave it to us to find the perfect tutor for your needs</p>
+                  <h3 className="text-xl font-semibold mb-4 text-gray-900 dark:text-white">Step 2: Match With a Mentor/Tutor</h3>
+                  <p className="text-gray-600 dark:text-gray-300">Either pick a tutor/mentor or leave it to us to find the perfect person for your needs</p>
                 </div>
 
                 {/* Step 3 */}
@@ -165,6 +165,17 @@ export default function Home() {
                   <h3 className="text-xl font-semibold mb-4 text-gray-900 dark:text-white">Step 3: Start Learning</h3>
                   <p className="text-gray-600 dark:text-gray-300">Get started as early as this week and get up to 40% off your first lesson (limited time)</p>
                 </div>
+              </div>
+              <div className="mt-12 text-center">
+                <p className="text-lg font-medium text-gray-900 dark:text-white mb-6">
+                  Apply now for a <span className="text-blue-600 dark:text-yellow-300 font-bold">FREE discovery call</span> to get matched with the perfect tutor/mentor
+                </p>
+                <a
+                  href="#enquiry-form"
+                  className="inline-block bg-ocean hover:bg-navy text-white font-semibold py-3 px-8 rounded-lg transition-colors"
+                >
+                  Fill out the form
+                </a>
               </div>
             </div>
             {/* <div className="flex justify-center mt-12">
@@ -180,6 +191,58 @@ export default function Home() {
           {/* Tutor Call-to-Action Section */}
           <section className="mt-32">
             <div className="max-w-4xl mx-auto">
+
+              {/* Tutor vs Mentor Section */}
+              <div className="mt-12 mb-8">
+                  <h3 className="text-2xl text-center font-semibold text-gray-900 dark:text-white mb-6">
+                    What is the difference between a tutor and mentor?
+                  </h3>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+                    <div className="bg-white rounded-lg p-6 shadow-sm border border-blue-100 hover:border-blue-200 transition-all">
+                      <h4 className="text-xl font-semibold text-gray-900 mb-4">Tutor</h4>
+                      <ul className="space-y-2 text-gray-600">
+                        <li className="flex items-start gap-2">
+                          <span className="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0"></span>
+                          <span>Young uni student/graduate that focuses on specific subject knowledge and exam preparation</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <span className="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0"></span>
+                          <span>Helps with improving your grades in exams, assignments, coursework, and test strategies</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <span className="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0"></span>
+                          <span>Mainly academic support for specific subjects for GCSEs and A-Levels</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <span className="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0"></span>
+                          <span>Great for networking and obtaining recommendations for future opportunities</span>
+                        </li>
+                      </ul>
+                    </div>
+                    <div className="bg-white rounded-lg p-6 shadow-sm border border-purple-100 hover:border-purple-200 transition-all">
+                      <h4 className="text-xl font-semibold text-gray-900 mb-4">Mentor</h4>
+                      <ul className="space-y-2 text-gray-600">
+                        <li className="flex items-start gap-2">
+                          <span className="w-2 h-2 bg-purple-500 rounded-full mt-2 flex-shrink-0"></span>
+                          <span>Young uni student/graduate that provides academic and career guidance from recently lived experiences</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <span className="w-2 h-2 bg-purple-500 rounded-full mt-2 flex-shrink-0"></span>
+                          <span>Helps with end-to-end university applications: personal statements, admissions tests, and interview prep</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <span className="w-2 h-2 bg-purple-500 rounded-full mt-2 flex-shrink-0"></span>
+                          <span>A friend that coaches you on personal development to achieve your goals</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <span className="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0"></span>
+                          <span>Also great for networking</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
               {/* Tutors Banner */}
               <div className="">
                 <Image 
@@ -192,16 +255,19 @@ export default function Home() {
               </div>
 
               {/* Call-to-Action Text and Button */}
-              <div className="text-center">
+              <div className="text-center max-w-2xl mx-auto">
                 <p className="text-lg text-gray-700 dark:text-gray-300 mb-6">
-                  Choose from tutors like the ones above or find more. If you&apos;re still unsure, we will find the perfect tutor for you.
+                  Choose from tutors or mentors like the ones above or find even more. If you&apos;re still unsure, we will find the perfect tutor for you.
                 </p>
+                
+                
+                
                 <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                   <Link 
                     href="/find-tutor" 
                     className="bg-ocean hover:bg-navy text-white font-semibold py-2 px-6 mt-8 rounded-lg transition-colors inline-block"
                   >
-                    Find a tutor
+                    Find a tutor or mentor
                   </Link>
                 </div>
                 
@@ -411,12 +477,12 @@ export default function Home() {
               <div className="bg-gradient-to-r from-yellow-400 to-yellow-500 text-yellow-900 border border-yellow-500 rounded-lg p-6 shadow-lg">
                 <div className="text-center">
                   <h3 className="text-2xl font-bold mb-3">🎉 Early Bird Promo - Limited Time Only!</h3>
-                  <p className="text-lg mb-2">Get a massive discount on your first lesson with our expert tutors</p>
+                  <p className="text-lg mb-2">Get a massive discount on your first lesson with our expert tutors and mentors</p>
                   <p className="text-base mb-4 font-medium">Available only at the start of the school term - ends soon!</p>
                   <div className="bg-white/20 rounded-lg p-6 max-w-md mx-auto">
                     <div className="text-4xl font-bold text-yellow-900 mb-2">£10 OFF</div>
                     <div className="text-xl font-semibold mb-2">Your First Lesson</div>
-                    <div className="text-base">GCSE & A-Level Tutoring</div>
+                    <div className="text-base">GCSE, A-Level Tutoring & University Applications</div>
                   </div>
                   <p className="text-sm mt-4 font-medium">No discount code needed - discount automatically applied when booking</p>
                   <p className="text-sm mt-2 font-medium">Regular pricing applies from the second lesson onwards</p>
@@ -432,8 +498,8 @@ export default function Home() {
                 <div className="group bg-white rounded-2xl p-8 shadow-sm border-2 border-gray-200 hover:border-blue-500 hover:shadow-lg focus-within:border-blue-500 focus-within:shadow-lg transition-all cursor-pointer flex flex-col h-full">
                 <div className="space-y-4 flex-grow">
                   <div className="flex items-center gap-2">
-                    <h3 className="text-xl font-semibold text-gray-900">GCSE Tutoring</h3>
-                    <span className="text-xs font-bold text-center bg-gradient-to-r from-yellow-400 to-yellow-500 text-white border border-yellow-500 rounded-full py-1 px-2 shadow-sm">EARLY BIRD PROMO</span>
+                    <h3 className="text-lg font-semibold text-gray-900">GCSE Tutoring</h3>
+                    <span className="text-xs font-bold text-center bg-gradient-to-r from-yellow-400 to-yellow-500 text-white border border-yellow-500 rounded-full py-1 px-2 shadow-sm">EARLY BIRD</span>
                     {/* <span className="text-xs font-bold text-center text-blue-600 border border-blue-600 rounded-full py-1 px-2">POPULAR</span> */}
                   </div>
                   <p className="text-gray-500">Perfect for improving GCSE grades</p>
@@ -480,8 +546,8 @@ export default function Home() {
                 <div className="group bg-white rounded-2xl p-8 shadow-sm border-2 border-gray-200 hover:border-blue-500 hover:shadow-lg focus-within:border-blue-500 focus-within:shadow-lg transition-all cursor-pointer flex flex-col h-full">
                 <div className="space-y-4 flex-grow">
                   <div className="flex items-center gap-2">
-                    <h3 className="text-xl font-semibold text-gray-900">A-Level Tutoring</h3>
-                    <span className="text-xs font-bold text-center bg-gradient-to-r from-yellow-400 to-yellow-500 text-white border border-yellow-500 rounded-full py-1 px-2 shadow-sm">EARLY BIRD PROMO</span>
+                    <h3 className="text-lg font-semibold text-gray-900">A-Level Tutoring</h3>
+                    <span className="text-xs font-bold text-center bg-gradient-to-r from-yellow-400 to-yellow-500 text-white border border-yellow-500 rounded-full py-1 px-2 shadow-sm">EARLY BIRD</span>
                   </div>
                   <p className="text-gray-500">Perfect for improving A-Level grades</p>
                   <div className="flex flex-col sm:flex-row sm:items-baseline gap-4">
@@ -522,30 +588,43 @@ export default function Home() {
 
               {/* Mentoring Tier */}
               <AnimatedCard delay={300}>
-                <div className="group bg-white rounded-2xl p-8 shadow-lg border-2 border-gray-200 hover:border-blue-500 hover:shadow-xl focus-within:shadow-xl transition-all cursor-pointer flex flex-col h-full">
+                <div className="group bg-white rounded-2xl p-8 shadow-sm border-2 border-gray-200 hover:border-blue-500 hover:shadow-lg focus-within:border-blue-500 focus-within:shadow-lg transition-all cursor-pointer flex flex-col h-full">
                 <div className="space-y-4 flex-grow">
-                  <h3 className="text-xl font-semibold text-gray-900">Mentoring</h3>
-                  <p className="text-gray-500">Perfect for career and academic guidance</p>
-                  <div className="flex items-baseline">
-                  <span className="text-5xl font-bold text-gray-900">£30</span>
-                  <span className="text-gray-500 ml-2">/ hour</span>
+                  <div className="flex items-center gap-2">
+                    <h3 className="text-lg font-semibold text-gray-900">Uni Admissions Mentoring</h3>
+                    <span className="text-xs font-bold text-center bg-gradient-to-r from-yellow-400 to-yellow-500 text-white border border-yellow-500 rounded-full py-1 px-2 shadow-sm">EARLY BIRD</span>
                   </div>
+                  <p className="text-gray-500">Perfect for career and academic guidance</p>
+                  <div className="flex flex-col sm:flex-row sm:items-baseline gap-4">
+                    <div className="flex items-baseline">
+                      <span className="text-5xl font-bold text-gray-900 line-through">£40</span>
+                    </div>
+                    <div className="flex items-baseline gap-2">
+                      <span className="text-5xl font-bold text-green-600">£30</span>
+                      <span className="text-gray-500">/ hour</span>
+                    </div>
+                  </div>
+                  <p className="text-sm text-gray-500 mt-2">£40/hr from second lesson onwards</p>
                   <ul className="space-y-4 mt-6">
-                  <li className="flex items-start gap-3">
-                    <span className="w-2 h-2 bg-gray-400 rounded-full mt-2 flex-shrink-0"></span>
-                    <span className="text-gray-600">Personal statement review and guidance</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <span className="w-2 h-2 bg-gray-400 rounded-full mt-2 flex-shrink-0"></span>
-                    <span className="text-gray-600">University application support</span>
-                  </li>
                   <li className="flex items-start gap-3">
                     <span className="w-2 h-2 bg-gray-400 rounded-full mt-2 flex-shrink-0"></span>
                     <span className="text-gray-600">Career pathway and degree choice advice</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="w-2 h-2 bg-gray-400 rounded-full mt-2 flex-shrink-0"></span>
-                    <span className="text-gray-600">CV writing and interview preparation</span>
+                    <span className="text-gray-600">Personal statement review and guidance</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="w-2 h-2 bg-gray-400 rounded-full mt-2 flex-shrink-0"></span>
+                    <span className="text-gray-600">End-to-end application support for Oxbridge and Russell Group universities</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="w-2 h-2 bg-gray-400 rounded-full mt-2 flex-shrink-0"></span>
+                    <span className="text-gray-600">CV writing and review</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="w-2 h-2 bg-gray-400 rounded-full mt-2 flex-shrink-0"></span>
+                    <span className="text-gray-600">Final interview preparation and mock interviews practice</span>
                   </li>
                   </ul>
                 </div>
