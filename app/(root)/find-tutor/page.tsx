@@ -9,7 +9,7 @@ export default function FindTutor() {
       name: "Uday M.",
       university: "University of Cambridge - Geography",
       bio: "Passionate about making learning accessible and enjoyable. I'm a seasoned tutor with over 2 years of professional tutoring experience. I specialize in GCSE and A-Level Geography, Economics and Business Studies. I also mentor students in preparation for university admissions especially for Oxbridge.",
-      tutoringStartingPrice: "£25",
+      tutoringStartingPrice: "£40",
       rating: 4.9,
       reviews: 23,
       lessons: 156,
@@ -19,12 +19,12 @@ export default function FindTutor() {
       subjects: ["Geography", "Economics", "Business Studies"],
       image: "/images/Uday Profile New.jpg",
       subjectsOffered: [
-        { subject: "Geography", level: "GCSE", price: "£25/hr" },
-        { subject: "Economics", level: "GCSE", price: "£25/hr" },
-        { subject: "Business Studies", level: "GCSE", price: "£25/hr" },
-        { subject: "Geography", level: "A-Level", price: "£30/hr" },
-        { subject: "Economics", level: "A-Level", price: "£30/hr" },
-        { subject: "Business Studies", level: "A-Level", price: "£30/hr" }
+        { subject: "Geography", level: "GCSE", price: "£40/hr" },
+        { subject: "Economics", level: "GCSE", price: "£40/hr" },
+        { subject: "Business Studies", level: "GCSE", price: "£40/hr" },
+        { subject: "Geography", level: "A-Level", price: "£40/hr" },
+        { subject: "Economics", level: "A-Level", price: "£40/hr" },
+        { subject: "Business Studies", level: "A-Level", price: "£40/hr" }
       ]
     },
     {
@@ -55,7 +55,7 @@ export default function FindTutor() {
       name: "Darshan G.",
       university: "University of Leicester - Medicine",
       bio: "I am a fifth-year student, currently studying Medicine at uni, I offer lessons for Biology, Chemistry and Physics at A-Level and GCSE. I can also help with Medicine applications for top UK universities.",
-      tutoringStartingPrice: "£25",
+      tutoringStartingPrice: "£30",
       rating: 4.8,
       reviews: 31,
       lessons: 203,
@@ -65,9 +65,9 @@ export default function FindTutor() {
       subjects: ["Chemistry", "Biology", "Physics"],
       image: "/images/Darshan Profile New.jpg",
       subjectsOffered: [
-        { subject: "Chemistry", level: "GCSE", price: "£25/hr" },
-        { subject: "Biology", level: "GCSE", price: "£25/hr" },
-        { subject: "Physics", level: "GCSE", price: "£25/hr" },
+        { subject: "Chemistry", level: "GCSE", price: "£30/hr" },
+        { subject: "Biology", level: "GCSE", price: "£30/hr" },
+        { subject: "Physics", level: "GCSE", price: "£30/hr" },
         { subject: "Biology", level: "A-Level", price: "£30/hr" },
       ]
     },
@@ -92,7 +92,7 @@ export default function FindTutor() {
       name: "Andrej P.",
       university: "University of Cambridge - Mathematics (now PhD student)",
       bio: "Cambridge Maths graduate now doing a PhD in Machine Learning at Edinburgh University. I offer lessons for Maths, and Further Maths at A-Level and GCSE. Can also provide specialist Mathematics application support for the best universities.",
-      tutoringStartingPrice: "£25",
+      tutoringStartingPrice: "£50",
       rating: 4.9,
       reviews: 27,
       lessons: 134,
@@ -102,10 +102,10 @@ export default function FindTutor() {
       subjects: ["Mathematics", "Further Mathematics"],
       image: "/images/Andrej Profile New.jpg",
       subjectsOffered: [
-        { subject: "Mathematics", level: "GCSE", price: "£25/hr" },
-        { subject: "Further Mathematics", level: "GCSE", price: "£25/hr" },
-        { subject: "Mathematics", level: "A-Level", price: "£30/hr" },
-        { subject: "Further Mathematics", level: "A-Level", price: "£30/hr" }
+        { subject: "Mathematics", level: "GCSE", price: "£50/hr" },
+        { subject: "Further Mathematics", level: "GCSE", price: "£50/hr" },
+        { subject: "Mathematics", level: "A-Level", price: "£50/hr" },
+        { subject: "Further Mathematics", level: "A-Level", price: "£50/hr" }
       ]
     },
     {

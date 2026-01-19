@@ -235,7 +235,7 @@ export default function Home() {
                           <span>A friend that coaches you on personal development to achieve your goals</span>
                         </li>
                         <li className="flex items-start gap-2">
-                          <span className="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0"></span>
+                          <span className="w-2 h-2 bg-purple-500 rounded-full mt-2 flex-shrink-0"></span>
                           <span>Also great for networking</span>
                         </li>
                       </ul>

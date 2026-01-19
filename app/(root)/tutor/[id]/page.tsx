@@ -8,7 +8,7 @@ const tutors = [
     id: 1,
     name: "Uday M.",
     university: "University of Cambridge - Geography",
-    tutoringStartingPrice: "£25",
+    tutoringStartingPrice: "£40",
     mentoringPrice: "£30",
     rating: 4.9,
     reviews: 23,
@@ -37,13 +37,12 @@ const tutors = [
       sunday: { morning: true, afternoon: true, evening: true }
     },
     subjectsOffered: [
-      { subject: "Geography", level: "GCSE", price: "£25/hr" },
-      { subject: "Economics", level: "GCSE", price: "£25/hr" },
-      { subject: "Business Studies", level: "GCSE", price: "£25/hr" },
-      { subject: "Geography", level: "A-Level", price: "£30/hr" },
-      { subject: "Economics", level: "A-Level", price: "£30/hr" },
-      { subject: "Business Studies", level: "A-Level", price: "£30/hr" }
-
+      { subject: "Geography", level: "GCSE", price: "£40/hr" },
+      { subject: "Economics", level: "GCSE", price: "£40/hr" },
+      { subject: "Business Studies", level: "GCSE", price: "£40/hr" },
+      { subject: "Geography", level: "A-Level", price: "£40/hr" },
+      { subject: "Economics", level: "A-Level", price: "£40/hr" },
+      { subject: "Business Studies", level: "A-Level", price: "£40/hr" }
     ]
   },
   {
@@ -88,7 +87,7 @@ const tutors = [
     id: 3,
     name: "Darshan G.",
     university: "University of Leicester - Medicine",
-    tutoringStartingPrice: "£25",
+    tutoringStartingPrice: "£30",
     mentoringPrice: "£30",
     rating: 4.8,
     reviews: 31,
@@ -117,9 +116,9 @@ const tutors = [
       sunday: { morning: true, afternoon: true, evening: true }
     },
     subjectsOffered: [
-      { subject: "Chemistry", level: "GCSE", price: "£25/hr" },
-      { subject: "Biology", level: "GCSE", price: "£25/hr" },
-      { subject: "Physics", level: "GCSE", price: "£25/hr" },
+      { subject: "Chemistry", level: "GCSE", price: "£30/hr" },
+      { subject: "Biology", level: "GCSE", price: "£30/hr" },
+      { subject: "Physics", level: "GCSE", price: "£30/hr" },
       { subject: "Biology", level: "A-Level", price: "£30/hr" },
     ]
   },
@@ -162,7 +161,7 @@ const tutors = [
     id: 5,
     name: "Andrej P.",
     university: "University of Cambridge - Mathematics (now PhD student)",
-    tutoringStartingPrice: "£25",
+    tutoringStartingPrice: "£50",
     mentoringPrice: "£30",
     rating: 4.9,
     reviews: 27,
@@ -190,10 +189,10 @@ const tutors = [
       sunday: { morning: true, afternoon: true, evening: true }
     },
     subjectsOffered: [
-      { subject: "Mathematics", level: "GCSE", price: "£25/hr" },
-      { subject: "Further Mathematics", level: "GCSE", price: "£25/hr" },
-      { subject: "Mathematics", level: "A-Level", price: "£30/hr" },
-      { subject: "Further Mathematics", level: "A-Level", price: "£30/hr" },
+      { subject: "Mathematics", level: "GCSE", price: "£50/hr" },
+      { subject: "Further Mathematics", level: "GCSE", price: "£50/hr" },
+      { subject: "Mathematics", level: "A-Level", price: "£50/hr" },
+      { subject: "Further Mathematics", level: "A-Level", price: "£50/hr" },
     ]
   },
   {
