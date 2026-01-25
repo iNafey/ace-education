@@ -9,7 +9,7 @@ const tutors = [
     name: "Uday M.",
     university: "University of Cambridge - Geography",
     tutoringStartingPrice: "£40",
-    mentoringPrice: "£30",
+    mentoringPrice: "£40",
     rating: 4.9,
     reviews: 23,
     lessons: 156,

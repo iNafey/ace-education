@@ -477,8 +477,7 @@ export default function Home() {
               <div className="bg-gradient-to-r from-yellow-400 to-yellow-500 text-yellow-900 border border-yellow-500 rounded-lg p-6 shadow-lg">
                 <div className="text-center">
                   <h3 className="text-2xl font-bold mb-3">🎉 Early Bird Promo - Limited Time Only!</h3>
-                  <p className="text-lg mb-2">Get a massive discount on your first lesson with our expert tutors and mentors</p>
-                  <p className="text-base mb-4 font-medium">Available only at the start of the school term - ends soon!</p>
+                  <p className="text-lg mb-2">Get a great discount on your first lesson with our expert tutors and mentors - ends soon!</p>
                   <div className="bg-white/20 rounded-lg p-6 max-w-md mx-auto">
                     <div className="text-4xl font-bold text-yellow-900 mb-2">£10 OFF</div>
                     <div className="text-xl font-semibold mb-2">Your First Lesson</div>
@@ -502,7 +501,7 @@ export default function Home() {
                     <span className="text-xs font-bold text-center bg-gradient-to-r from-yellow-400 to-yellow-500 text-white border border-yellow-500 rounded-full py-1 px-2 shadow-sm">EARLY BIRD</span>
                     {/* <span className="text-xs font-bold text-center text-blue-600 border border-blue-600 rounded-full py-1 px-2">POPULAR</span> */}
                   </div>
-                  <p className="text-gray-500">Perfect for improving GCSE grades</p>
+                  <p className="text-gray-500">Lessons starting from</p>
                   <div className="flex flex-col sm:flex-row sm:items-baseline gap-4">
                     <div className="flex items-baseline">
                       <span className="text-5xl font-bold text-gray-900 line-through">£25</span>
@@ -535,8 +534,8 @@ export default function Home() {
                   </ul>
                 </div>
                 
-                <a href="#enquiry-form" className="w-full mt-8 bg-white text-gray-900 border-2 border-gray-200 group-hover:border-blue-500 font-semibold py-3 px-6 rounded-lg transition-all inline-block text-center self-end">
-                    Book a Lesson
+                <a href="/find-tutor" className="w-full mt-8 bg-white text-gray-900 border-2 border-gray-200 group-hover:border-blue-500 font-semibold py-3 px-6 rounded-lg transition-all inline-block text-center self-end">
+                    Find a tutor
                 </a>
                 </div>
               </AnimatedCard>
@@ -549,7 +548,7 @@ export default function Home() {
                     <h3 className="text-lg font-semibold text-gray-900">A-Level Tutoring</h3>
                     <span className="text-xs font-bold text-center bg-gradient-to-r from-yellow-400 to-yellow-500 text-white border border-yellow-500 rounded-full py-1 px-2 shadow-sm">EARLY BIRD</span>
                   </div>
-                  <p className="text-gray-500">Perfect for improving A-Level grades</p>
+                  <p className="text-gray-500">Lessons starting from</p>
                   <div className="flex flex-col sm:flex-row sm:items-baseline gap-4">
                     <div className="flex items-baseline">
                       <span className="text-5xl font-bold text-gray-900 line-through">£30</span>
@@ -580,8 +579,8 @@ export default function Home() {
                     </li>
                   </ul>
                 </div>
-                <a href="#enquiry-form" className="w-full mt-8 bg-white text-gray-900 border-2 border-gray-200 group-hover:border-blue-500 font-semibold py-3 px-6 rounded-lg transition-all inline-block text-center">
-                    Book a Lesson
+                <a href="/find-tutor" className="w-full mt-8 bg-white text-gray-900 border-2 border-gray-200 group-hover:border-blue-500 font-semibold py-3 px-6 rounded-lg transition-all inline-block text-center">
+                    Find a tutor
                   </a>
                 </div>
               </AnimatedCard>
@@ -594,7 +593,7 @@ export default function Home() {
                     <h3 className="text-lg font-semibold text-gray-900">Uni Admissions Mentoring</h3>
                     <span className="text-xs font-bold text-center bg-gradient-to-r from-yellow-400 to-yellow-500 text-white border border-yellow-500 rounded-full py-1 px-2 shadow-sm">EARLY BIRD</span>
                   </div>
-                  <p className="text-gray-500">Perfect for career and academic guidance</p>
+                  <p className="text-gray-500">Lessons starting from</p>
                   <div className="flex flex-col sm:flex-row sm:items-baseline gap-4">
                     <div className="flex items-baseline">
                       <span className="text-5xl font-bold text-gray-900 line-through">£40</span>
@@ -628,8 +627,8 @@ export default function Home() {
                   </li>
                   </ul>
                 </div>
-                <a href="#enquiry-form" className="w-full mt-8 bg-white text-gray-900 border-2 border-gray-200 group-hover:border-blue-500 font-semibold py-3 px-6 rounded-lg transition-all inline-block text-center self-end">
-                  Book a Lesson
+                <a href="/find-tutor" className="w-full mt-8 bg-white text-gray-900 border-2 border-gray-200 group-hover:border-blue-500 font-semibold py-3 px-6 rounded-lg transition-all inline-block text-center self-end">
+                  Find a mentor
                 </a>
                 </div>
               </AnimatedCard>
