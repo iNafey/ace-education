@@ -63,7 +63,7 @@ const tutors = [
     image: "/images/Vivek Profile New.PNG",
     about: "As a law graduate from Warwick, I bring both academic excellence and practical experience to every lesson. I offer lessons for Law, English Literature and English Language at A-Level and GCSE. I can also help with Law applications for top UK universities.",
     qualifications: [
-      { subject: "Law", qualification: "University of Warwick Bachelor's Degree", grade: "First Class Honours" }
+      { subject: "Law", qualification: "University of Warwick Bachelor's Degree", grade: "Upper Second-class Honours" }
     ],
     availability: {
       monday: { morning: true, afternoon: true, evening: true },
